@@ -43,7 +43,7 @@
                 <!-- ./col -->
                 <div class="col-lg-6 col-6">
                     <!-- small box -->
-                    <div class="small-box bg-warning">
+                    <div class="small-box bg-danger">
                         <div class="inner">
                             <h3>53<sup style="font-size: 20px">%</sup></h3>
                             <p>Pending for Invoice</p>
