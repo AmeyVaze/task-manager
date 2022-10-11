@@ -87,6 +87,10 @@ Route::get('/front-desk-dashboard', function () {
     return view('front-desk.frontdeskdashboard');
 });
 
+Route::get('/create-invoice', function () {
+    return view('front-desk.createinvoice');
+});
+
 
 Route::get('/admin-dashboard', function () {
     return view('admin.admindashboard');

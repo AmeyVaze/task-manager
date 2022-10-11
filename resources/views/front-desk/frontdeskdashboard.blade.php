@@ -28,7 +28,7 @@
             <div class="row">
                 <div class="col-lg-6 col-6">
                     <!-- small box -->
-                    <div class="small-box bg-success">
+                    <div class="small-box bg-teal">
                         <div class="inner">
                             <h3>150</h3>
                             <p>Invoiced</p>
@@ -43,7 +43,7 @@
                 <!-- ./col -->
                 <div class="col-lg-6 col-6">
                     <!-- small box -->
-                    <div class="small-box bg-danger">
+                    <div class="small-box bg-indigo">
                         <div class="inner">
                             <h3>53<sup style="font-size: 20px">%</sup></h3>
                             <p>Pending for Invoice</p>

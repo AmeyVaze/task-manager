@@ -221,6 +221,15 @@
                         </li>
 
                         <li class="nav-item">
+                            <a href="{{ url('/create-invoice') }}" class="nav-link">
+                                <i class="nav-icon fas fa-list-alt"></i>
+                                <p>
+                                    Create Invoice
+                                </p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
                             <a href="{{ url('/report-issue') }}" class="nav-link">
                                 <i class="nav-icon fas fa-flag"></i>
                                 <p>
