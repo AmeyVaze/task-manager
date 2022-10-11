@@ -102,7 +102,17 @@ Route::get('/register-employees', function () {
     return view('admin.registeremployees');
 });
 
+Route::get('/employee-list', function () {
+    return view('admin.employeelist');
+});
+
+
+
 Route::get('/register-clients', function () {
     return view('admin.registerclients');
+});
+
+Route::get('/client-list', function () {
+    return view('admin.clientlist');
 });
 

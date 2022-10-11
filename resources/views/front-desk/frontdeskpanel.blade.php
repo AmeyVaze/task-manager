@@ -212,7 +212,7 @@
                         <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
 
                         <li class="nav-item">
-                            <a href="{{ url('/employee-dashboard') }}" class="nav-link">
+                            <a href="{{ url('/front-desk-dashboard') }}" class="nav-link">
                                 <i class="nav-icon fas fa-home"></i>
                                 <p>
                                     Dashboard
@@ -230,7 +230,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="{{ url('/report-issue') }}" class="nav-link">
+                            <a href="{{ url('/') }}" class="nav-link">
                                 <i class="nav-icon fas fa-flag"></i>
                                 <p>
                                     Report an issue

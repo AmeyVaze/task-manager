@@ -266,7 +266,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{ url('/employee-list') }}" class="nav-link">
                                 <i class="nav-icon fas fa-list"></i>
                                 <p>
                                     Employee List
@@ -275,7 +275,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{ url('/client-list') }}" class="nav-link">
                                 <i class="nav-icon fas fa-list"></i>
                                 <p>
                                     Client List
