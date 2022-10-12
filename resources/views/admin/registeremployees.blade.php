@@ -24,11 +24,9 @@
         <div class="col-6 register-box">
             <div class="card card-outline card-primary">
                 <div class="card-header text-center">
-                    <a href="../../index2.html" class="h1"><b>Task</b>Manager</a>
+                    <p class="login-box-msg">Register a new employee</p>
                 </div>
                 <div class="card-body">
-                    <p class="login-box-msg">Register a new employee</p>
-
                     <form action="../../index.html" method="post">
                         <div class="input-group mb-3">
                             <input type="text" class="form-control" placeholder="First name">
