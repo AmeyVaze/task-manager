@@ -13,9 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('clients', function (Blueprint $table) {
-
-            $table->id('client_id');
+        Schema::create('internal_companies', function (Blueprint $table) {
+            $table->id('company_id');
             $table->string('type_of_org');
             $table->string('client_name');
             $table->text('registered_address');
@@ -26,9 +25,6 @@ return new class extends Migration
             $table->string('cp_name');
             $table->string('cp_phone')->unique();
             $table->string('cp_email')->unique();
-
-            $table->unsignedBigInteger('company_id');
-            $table->foreign('company_id')->references('company_id')->on('internal_companies');
 
             $table->timestamps();
         });
@@ -41,6 +37,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('clients');
+        Schema::dropIfExists('internal_companies');
     }
 };
