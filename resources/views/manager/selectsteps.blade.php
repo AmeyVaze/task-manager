@@ -115,50 +115,7 @@
                         </ul>
                     </div>
 
-                    <button type="button" class="btn btn-sm btn-warning"><i class="fas fa-plus"></i> Add new step</button>
-
-                    <div class="card card-primary m-5">
-                        <div class="card-header bg-danger">
-                            <h3 class="card-title">TASK DATES</h3>
-                        </div>
-                        <div class="card-body">
-                            <div class="form-group">
-
-                                <div class="input-group date mb-4" id="taskstartdate" data-target-input="nearest">
-                                    <input type="text" class="form-control datetimepicker-input" data-target="#taskstartdate" placeholder="Select task start date" />
-                                    <div class="input-group-append" data-target="#taskstartdate" data-toggle="datetimepicker">
-                                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                                    </div>
-                                </div>
-
-                                <div class="input-group date mb-2" id="taskenddate" data-target-input="nearest">
-                                    <input type="text" class="form-control datetimepicker-input" data-target="#taskenddate" placeholder="Select task end date" />
-                                    <div class="input-group-append" data-target="#taskenddate" data-toggle="datetimepicker">
-                                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <script type="text/javascript">
-                                $(function() {
-                                    $('#taskstartdate').datetimepicker({
-                                        format: 'L'
-                                    });
-
-                                    $('#taskenddate').datetimepicker({
-                                        format: 'L'
-                                    });
-                                });
-                            </script>
-                            <!-- /.card-body -->
-                        </div>
-                        <!-- /.card -->
-
-
-                    </div>
-
-                    <hr>
+                    
                     <a href="{{ url('/select-employee') }}" class="btn btn-success btn-lg active mb-2" role="button" aria-pressed="true">Select Employee</a>
                 </div>
                 <!-- /.card -->

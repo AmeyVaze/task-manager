@@ -150,7 +150,7 @@
 
                         <div class="row justify-content-center mt-3 mb-5">
                             <div class="col-10">
-                                <p class="lead"><b>Bank Details</b></p>
+                                <p class="lead"><b>Payment Bank Details</b></p>
 
                                 <div class="table-responsive">
                                     <table class="table">

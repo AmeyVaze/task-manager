@@ -58,20 +58,27 @@
 
                             <div class="card card-primary mt-5">
                                 <div class="card-header bg-danger">
-                                    <h3 class="card-title">STATUTORY DATES</h3>
+                                    <h3 class="card-title">ASSIGN DATES</h3>
                                 </div>
                                 <div class="card-body">
                                     <div class="form-group">
 
-                                        <div class="input-group date mb-4" id="statutorystartdate" data-target-input="nearest">
+                                        <div class="input-group date mb-3" id="statutorystartdate" data-target-input="nearest">
                                             <input type="text" class="form-control datetimepicker-input" data-target="#statutorystartdate" placeholder="Select start date" />
                                             <div class="input-group-append" data-target="#statutorystartdate" data-toggle="datetimepicker">
                                                 <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                                             </div>
                                         </div>
 
-                                        <div class="input-group date mb-2" id="statutoryenddate" data-target-input="nearest">
+                                        <div class="input-group date mb-3" id="statutoryenddate" data-target-input="nearest">
                                             <input type="text" class="form-control datetimepicker-input" data-target="#statutoryenddate" placeholder="Select end date" />
+                                            <div class="input-group-append" data-target="#statutoryenddate" data-toggle="datetimepicker">
+                                                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="input-group date mb-3" id="statutoryenddate" data-target-input="nearest">
+                                            <input type="text" class="form-control datetimepicker-input" data-target="#statutoryenddate" placeholder="Select  statutory end date" />
                                             <div class="input-group-append" data-target="#statutoryenddate" data-toggle="datetimepicker">
                                                 <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                                             </div>
