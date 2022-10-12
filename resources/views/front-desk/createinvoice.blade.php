@@ -147,6 +147,12 @@
                         </div>
                         <!-- /.row -->
 
+                        <div class="row justify-content-center">
+                            <div class="col-3">
+                                <input type="text" placeholder="Enter amount in words....">
+                            </div>
+                        </div>
+
 
                         <div class="row justify-content-center mt-3 mb-5">
                             <div class="col-10">
