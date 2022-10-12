@@ -22,9 +22,9 @@
 
     <div class="row justify-content-center">
         <div class="col-6 register-box">
-            <div class="card card-outline card-primary">
-                <div class="card-header text-center">
-                    <p class="login-box-msg">Register a new employee</p>
+            <div class="card card-primary">
+                <div class="card-header text-center bg-purple">
+                    <p class="login-box-msg"><h4><b>Register a new employee</b></h4></p>
                 </div>
                 <div class="card-body">
                     <form action="../../index.html" method="post">
