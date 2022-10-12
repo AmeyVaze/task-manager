@@ -18,8 +18,8 @@ return new class extends Migration
             $table->id('client_id');
             $table->string('type_of_org');
             $table->string('client_name');
-            $table->string('registered_address');
-            $table->string('billing_address');
+            $table->text('registered_address');
+            $table->text('billing_address');
             $table->string('PAN')->unique();
             $table->string('TAN')->unique();
             $table->string('GSTIN')->unique();
