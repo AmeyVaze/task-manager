@@ -13,9 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('clients', function (Blueprint $table) {
-
-            $table->id('client_id');
+        Schema::create('internal_companies', function (Blueprint $table) {
+            $table->id('company_id');
             $table->string('type_of_org');
             $table->string('client_name');
             $table->text('registered_address');
@@ -38,6 +37,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('clients');
+        Schema::dropIfExists('internal_companies');
     }
 };

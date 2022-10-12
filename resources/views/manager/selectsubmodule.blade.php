@@ -63,41 +63,34 @@
                                 <div class="card-body">
                                     <div class="form-group">
 
-                                        <div class="input-group date mb-3" id="statutorystartdate" data-target-input="nearest">
-                                            <input type="text" class="form-control datetimepicker-input" data-target="#statutorystartdate" placeholder="Select start date" />
-                                            <div class="input-group-append" data-target="#statutorystartdate" data-toggle="datetimepicker">
-                                                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                                            </div>
+                                        <div class="input-group date mb-3" id="startdatepicker">
+                                            <input type="text" class="from-control" placeholder="Enter the start date">
+                                            <span class="input-group-append">
+                                                <span class="input-group-text bg-white">
+                                                    <i class="fa fa-calendar"></i>
+                                                </span>
+                                            </span>
                                         </div>
 
-                                        <div class="input-group date mb-3" id="statutoryenddate" data-target-input="nearest">
-                                            <input type="text" class="form-control datetimepicker-input" data-target="#statutoryenddate" placeholder="Select end date" />
-                                            <div class="input-group-append" data-target="#statutoryenddate" data-toggle="datetimepicker">
-                                                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                                            </div>
+                                        <div class="input-group date mb-3" id="startdatepicker">
+                                            <input type="text" class="from-control" placeholder="Enter the start date">
+                                            <span class="input-group-append">
+                                                <span class="input-group-text bg-white">
+                                                    <i class="fa fa-calendar"></i>
+                                                </span>
+                                            </span>
                                         </div>
 
-                                        <div class="input-group date mb-3" id="statutoryenddate" data-target-input="nearest">
-                                            <input type="text" class="form-control datetimepicker-input" data-target="#statutoryenddate" placeholder="Select  statutory end date" />
-                                            <div class="input-group-append" data-target="#statutoryenddate" data-toggle="datetimepicker">
-                                                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                                            </div>
+                                        <div class="input-group date mb-3" id="startdatepicker">
+                                            <input type="text" class="from-control" placeholder="Enter the start date">
+                                            <span class="input-group-append">
+                                                <span class="input-group-text bg-white">
+                                                    <i class="fa fa-calendar"></i>
+                                                </span>
+                                            </span>
                                         </div>
 
                                     </div>
-
-                                    <script type="text/javascript">
-                                        $(function() {
-                                            $('#statutorystartdate').datetimepicker({
-                                                format: 'L'
-                                            });
-
-                                            $('#statutoryenddate').datetimepicker({
-                                                format: 'L'
-                                            });
-                                        });
-                                    </script>
-                                    <!-- /.card-body -->
                                 </div>
                                 <!-- /.card -->
 
@@ -115,5 +108,13 @@
     <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
+
+<script type="text/javascript">
+    $(function () {
+        $('#startdatepicker').datepicker();
+    });
 </script>
+
+
+
 @endsection

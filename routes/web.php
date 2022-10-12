@@ -79,6 +79,10 @@ Route::get('/report-issue', function () {
     return view('employee.reportissue');
 });
 
+Route::get('/assigned-tasks-employee', function () {
+    return view('employee.assignedtasksemployee');
+});
+
 
 //------------------------------------------------------
 
