@@ -28,7 +28,7 @@
 
                 <div class="col-10 card">
                     <div class="card-header bg-primary">
-                        List of Assigned Tasks
+                        Pending for Review
                     </div>
                     <div class="card-body">
                         <table class="table table-hover">
@@ -41,6 +41,7 @@
                                     <th scope="col">Module</th>
                                     <th scope="col">Submodule</th>
                                     <th scope="col">Client Name</th>
+                                    <th scope="col">Action</th>
                                 </tr>
                             </thead>
 
@@ -52,6 +53,10 @@
                                     <td>GST</td>
                                     <td>GST FILINGS</td>
                                     <td>Client-1</td>
+                                    <td>
+                                        <span class="btn btn-md btn-success">Invoice</span>
+                                        <span class="btn btn-md btn-danger">Revert Back</span>
+                                    </td>
                                 </tr>
 
                                 <tr>
@@ -61,6 +66,10 @@
                                     <td>AUDIT</td>
                                     <td>AUDITING</td>
                                     <td>Client-2</td>
+                                    <td>
+                                        <span class="btn btn-md btn-success">Invoice</span>
+                                        <span class="btn btn-md btn-danger">Revert Back</span>
+                                    </td>
                                 </tr>
 
                                 <tr>
@@ -70,6 +79,10 @@
                                     <td>TDS</td>
                                     <td>TDS FILINGS</td>
                                     <td>Client-3</td>
+                                    <td>
+                                        <span class="btn btn-md btn-success">Invoice</span>
+                                        <span class="btn btn-md btn-danger">Revert Back</span>
+                                    </td>
                                 </tr>
 
                                 <tr>
@@ -79,6 +92,10 @@
                                     <td>TCS</td>
                                     <td>TCS FILINGS</td>
                                     <td>Client-4</td>
+                                    <td>
+                                        <span class="btn btn-md btn-success">Invoice</span>
+                                        <span class="btn btn-md btn-danger">Revert Back</span>
+                                    </td>
                                 </tr>
 
                                 <tr>
@@ -88,6 +105,10 @@
                                     <td>ITR</td>
                                     <td>ITR FILINGS</td>
                                     <td>Client-5</td>
+                                    <td>
+                                        <span class="btn btn-md btn-success">Invoice</span>
+                                        <span class="btn btn-md btn-danger">Revert Back</span>
+                                    </td>
                                 </tr>
 
                             </tbody>

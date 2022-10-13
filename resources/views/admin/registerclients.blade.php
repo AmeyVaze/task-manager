@@ -85,11 +85,25 @@
                             </div>
                         </div>
 
+                        <div>
+                            <span>
+                                <p>
+                                    **Check mark if billing address is same as registered address
+                                </p>
+                            </span>
+                        </div>
+
                         <div class="input-group mb-3">
                             <input type="text" class="form-control" placeholder="Billing address">
                             <div class="input-group-append">
                                 <div class="input-group-text">
-                                    <span class="fas fa-location-arrow"></span>
+                                    <input type="checkbox">
+                                </div>
+                                <div class="input-group-text">
+                                    <span>
+                                        
+                                        <span class="fas fa-location-arrow"></span>
+                                    </span>
                                 </div>
                             </div>
                         </div>

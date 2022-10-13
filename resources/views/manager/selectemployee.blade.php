@@ -37,7 +37,6 @@
                                     <th scope="col">#</th>
                                     <th scope="col">First Name</th>
                                     <th scope="col">Last Name</th>
-                                    <th scope="col">Client Name</th>
                                     <th>
                                         Action
                                     </th>
@@ -48,7 +47,7 @@
                                     <th scope="row">1</th>
                                     <td>John</td>
                                     <td>Doe</td>
-                                    <td>Client 1</td>
+                                    
                                     <td>
                                         <span>
                                             <input type="checkbox">
@@ -59,7 +58,7 @@
                                     <th scope="row">2</th>
                                     <td>Jessy</td>
                                     <td>Jones</td>
-                                    <td>Client 2</td>
+                                    
                                     <td>
                                         <span>
                                             <input type="checkbox">
@@ -70,7 +69,7 @@
                                     <th scope="row">3</th>
                                     <td>Larry</td>
                                     <td>Page</td>
-                                    <td>Client 3</td>
+                                    
                                     <td>
                                         <span>
                                             <input type="checkbox">
@@ -81,7 +80,7 @@
                                     <th scope="row">4</th>
                                     <td>Jack</td>
                                     <td>Sparrow</td>
-                                    <td>Client 4</td>
+                                    
                                     <td>
                                         <span>
                                             <input type="checkbox">
@@ -92,7 +91,7 @@
                                     <th scope="row">5</th>
                                     <td>Gal</td>
                                     <td>Gadot</td>
-                                    <td>Client 5</td>
+                                    
                                     <td>
                                         <span>
                                             <input type="checkbox">
@@ -103,7 +102,7 @@
                                     <th scope="row">6</th>
                                     <td>Larry</td>
                                     <td>Page</td>
-                                    <td>Client 6</td>
+                                    
                                     <td>
                                         <span>
                                             <input type="checkbox">
@@ -114,7 +113,7 @@
                                     <th scope="row">7</th>
                                     <td>Abhinav</td>
                                     <td>Sharma</td>
-                                    <td>Client 7</td>
+                                    
                                     <td>
                                         <span>
                                             <input type="checkbox">
@@ -125,7 +124,7 @@
                                     <th scope="row">8</th>
                                     <td>Aaimaan</td>
                                     <td>Beig</td>
-                                    <td>Client 8</td>
+                                
                                     <td>
                                         <span>
                                             <input type="checkbox">
@@ -136,7 +135,7 @@
                                     <th scope="row">9</th>
                                     <td>Anish</td>
                                     <td>Kulkarni</td>
-                                    <td>Client 9</td>
+                                
                                     <td>
                                         <span>
                                             <input type="checkbox">

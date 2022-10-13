@@ -64,7 +64,7 @@
                                     <div class="form-group">
 
                                         <div class="input-group date mb-3" id="startdatepicker">
-                                            <input type="text" class="from-control" placeholder="Enter the start date">
+                                            <input type="text" class="from-control" placeholder="start date">
                                             <span class="input-group-append">
                                                 <span class="input-group-text bg-white">
                                                     <i class="fa fa-calendar"></i>
@@ -73,7 +73,7 @@
                                         </div>
 
                                         <div class="input-group date mb-3" id="enddatepicker">
-                                            <input type="text" class="from-control" placeholder="Enter the start date">
+                                            <input type="text" class="from-control" placeholder="end date">
                                             <span class="input-group-append">
                                                 <span class="input-group-text bg-white">
                                                     <i class="fa fa-calendar"></i>
@@ -82,7 +82,7 @@
                                         </div>
 
                                         <div class="input-group date mb-3" id="statutoryenddatepicker">
-                                            <input type="text" class="from-control" placeholder="Enter the statutory end date">
+                                            <input type="text" class="from-control" placeholder="statutory end date">
                                             <span class="input-group-append">
                                                 <span class="input-group-text bg-white">
                                                     <i class="fa fa-calendar"></i>

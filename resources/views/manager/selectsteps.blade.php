@@ -46,7 +46,7 @@
                                 <!-- todo text -->
                                 <span class="text">STEP-1</span>
                                 <!-- Emphasis label -->
-                                <small class="badge badge-danger"><i class="far fa-clock"></i> 2 mins</small>
+                                {{-- <small class="badge badge-danger"><i class="far fa-clock"></i> 2 mins</small> --}}
                                 <!-- General tools such as edit or delete-->
                                
                             </li>
@@ -57,7 +57,7 @@
                                     <label for="todoCheck2"></label>
                                 </div>
                                 <span class="text">STEP-2</span>
-                                <small class="badge badge-info"><i class="far fa-clock"></i> 5 mins</small>
+                                {{-- <small class="badge badge-info"><i class="far fa-clock"></i> 5 mins</small> --}}
                                 
                             </li>
 
@@ -67,7 +67,7 @@
                                     <label for="todoCheck3"></label>
                                 </div>
                                 <span class="text">STEP-3</span>
-                                <small class="badge badge-warning"><i class="far fa-clock"></i> 10 mins</small>
+                                {{-- <small class="badge badge-warning"><i class="far fa-clock"></i> 10 mins</small> --}}
                                 
                             </li>
 
@@ -77,7 +77,7 @@
                                     <label for="todoCheck4"></label>
                                 </div>
                                 <span class="text">STEP-4</span>
-                                <small class="badge badge-success"><i class="far fa-clock"></i> 15 mins</small>
+                                {{-- <small class="badge badge-success"><i class="far fa-clock"></i> 15 mins</small> --}}
                                 
                             </li>
 
@@ -87,7 +87,7 @@
                                     <label for="todoCheck5"></label>
                                 </div>
                                 <span class="text">STEP-5</span>
-                                <small class="badge badge-primary"><i class="far fa-clock"></i> 20 mins</small>
+                                {{-- <small class="badge badge-primary"><i class="far fa-clock"></i> 20 mins</small> --}}
                                
                             </li>
 
@@ -97,7 +97,7 @@
                                     <label for="todoCheck6"></label>
                                 </div>
                                 <span class="text">STEP-6</span>
-                                <small class="badge badge-secondary"><i class="far fa-clock"></i> 1 hr</small>
+                                {{-- <small class="badge badge-secondary"><i class="far fa-clock"></i> 1 hr</small> --}}
                                 
                             </li>
 

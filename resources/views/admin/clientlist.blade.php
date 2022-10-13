@@ -32,6 +32,7 @@
                                 <th>E-mail</th>
                                 <th>Phone Number</th>
                                 <th>Registered Address</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
 
@@ -43,6 +44,9 @@
                                 <td>teslamotors@gmail.com</td>
                                 <td>XXXX2338699</td>
                                 <td>California, USA</td>
+                                <td>
+                                    <span class="btn btn-md btn-success" data-toggle="button" aria-pressed="true">Active</span>
+                                </td>
                             </tr>
 
                             <tr>

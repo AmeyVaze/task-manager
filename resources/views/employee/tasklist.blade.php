@@ -40,40 +40,58 @@
                             <li class="mb-4 bg-olive">
                                     <!-- todo text -->
                                     <span class="text">STEP DESCRIPTION</span>
+                                    <span class="float-right">
+                                        <input type="checkbox">
+                                    </span>
                                     <!-- Emphasis label -->
-                                    <small class="badge badge-danger"><i class="far fa-clock"></i> 2 mins</small>
+                                    {{-- <small class="badge badge-danger"><i class="far fa-clock"></i> 2 mins</small> --}}
                                     <!-- General tools such as edit or delete-->
                             </li>
 
                             <li class="mb-4 bg-olive">
                                     <span class="text">STEP DESCRIPTION</span>
-                                    <small class="badge badge-info"><i class="far fa-clock"></i> 5 mins</small>
+                                    <span class="float-right">
+                                        <input type="checkbox">
+                                    </span>
+                                    {{-- <small class="badge badge-info"><i class="far fa-clock"></i> 5 mins</small> --}}
                             </li>
 
                             <li class="mb-4 bg-olive">
                                     <span class="text">STEP DESCRIPTION</span>
-                                    <small class="badge badge-warning"><i class="far fa-clock"></i> 10 mins</small>
+                                    <span class="float-right">
+                                        <input type="checkbox">
+                                    </span>
+                                    {{-- <small class="badge badge-warning"><i class="far fa-clock"></i> 10 mins</small> --}}
                             
                             </li>
 
                             <li class="mb-4 bg-olive">
                                 
                                     <span class="text">STEP DESCRIPTION</span>
-                                    <small class="badge badge-success"><i class="far fa-clock"></i> 15 mins</small>
+                                    <span class="float-right">
+                                        <input type="checkbox">
+                                    </span>
+                                    {{-- <small class="badge badge-success"><i class="far fa-clock"></i> 15 mins</small> --}}
                                
                             </li>
 
                             <li class="mb-4 bg-olive">
                                
                                     <span class="text">STEP DESCRIPTION</span>
-                                    <small class="badge badge-primary"><i class="far fa-clock"></i> 20 mins</small>
+                                    <span class="float-right">
+                                        <input type="checkbox">
+                                    </span>
+                                    {{-- <small class="badge badge-primary"><i class="far fa-clock"></i> 20 mins</small> --}}
                                
                             </li>
 
                             <li class="mb-4 bg-olive">
                                 
                                     <span class="text">STEP DESCRIPTION</span>
-                                    <small class="badge badge-secondary"><i class="far fa-clock"></i> 1 hr</small>
+                                    <span class="float-right">
+                                        <input type="checkbox">
+                                    </span>
+                                    {{-- <small class="badge badge-secondary"><i class="far fa-clock"></i> 1 hr</small> --}}
                                 
                             </li>
 
