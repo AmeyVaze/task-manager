@@ -111,7 +111,6 @@ Route::get('/employee-list', function () {
 });
 
 
-
 Route::get('/register-clients', function () {
     return view('admin.registerclients');
 });
