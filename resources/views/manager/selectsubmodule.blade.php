@@ -72,7 +72,7 @@
                                             </span>
                                         </div>
 
-                                        <div class="input-group date mb-3" id="startdatepicker">
+                                        <div class="input-group date mb-3" id="enddatepicker">
                                             <input type="text" class="from-control" placeholder="Enter the start date">
                                             <span class="input-group-append">
                                                 <span class="input-group-text bg-white">
@@ -81,8 +81,8 @@
                                             </span>
                                         </div>
 
-                                        <div class="input-group date mb-3" id="startdatepicker">
-                                            <input type="text" class="from-control" placeholder="Enter the start date">
+                                        <div class="input-group date mb-3" id="statutoryenddatepicker">
+                                            <input type="text" class="from-control" placeholder="Enter the statutory end date">
                                             <span class="input-group-append">
                                                 <span class="input-group-text bg-white">
                                                     <i class="fa fa-calendar"></i>
@@ -112,6 +112,8 @@
 <script type="text/javascript">
     $(function () {
         $('#startdatepicker').datepicker();
+        $('#enddatepicker').datepicker();
+        $('#statutoryenddatepicker').datepicker();
     });
 </script>
 

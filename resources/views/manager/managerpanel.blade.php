@@ -231,21 +231,14 @@
 
                         <li class="nav-item">
                             <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-database"></i>
-                                <p>
-                                    Database
-                                </p>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
                                 <i class="nav-icon fa fa-cog fa-spin fa-3x fa-fw"></i>
                                 <p>
                                     Other Manager Options
                                 </p>
                             </a>
                         </li>
+
+                        
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->

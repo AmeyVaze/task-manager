@@ -221,51 +221,6 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="{{ url('/') }}" class="nav-link">
-                                <i class="nav-icon fas fa-signal"></i>
-                                <p>
-                                    Other Dashboards
-                                </p>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="{{ url('/assign-tasks') }}" class="nav-link">
-                                <i class="nav-icon fas fa-user"></i>
-                                <p>
-                                    Assign Tasks
-                                </p>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="{{ url('/register-employees') }}" class="nav-link">
-                                <i class="nav-icon fas fa-user-plus"></i>
-                                <p>
-                                    Register Employees
-                                </p>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="{{ url('/register-clients') }}" class="nav-link">
-                                <i class="nav-icon fas fa-building"></i>
-                                <p>
-                                    Register Clients
-                                </p>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-plus-square"></i>
-                                <p>
-                                    Update Roles
-                                </p>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
                             <a href="{{ url('/employee-list') }}" class="nav-link">
                                 <i class="nav-icon fas fa-list"></i>
                                 <p>

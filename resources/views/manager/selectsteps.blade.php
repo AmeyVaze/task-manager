@@ -36,6 +36,7 @@
                     <!-- /.card-header -->
                     <div class="card-body">
                         <ul class="todo-list" data-widget="todo-list">
+
                             <li>
                                 <!-- checkbox -->
                                 <div class="icheck-success d-inline ml-2">
@@ -47,9 +48,7 @@
                                 <!-- Emphasis label -->
                                 <small class="badge badge-danger"><i class="far fa-clock"></i> 2 mins</small>
                                 <!-- General tools such as edit or delete-->
-                                <div class="tools">
-                                    <i class="fas fa-trash-o"></i>
-                                </div>
+                               
                             </li>
 
                             <li>
@@ -59,9 +58,7 @@
                                 </div>
                                 <span class="text">STEP-2</span>
                                 <small class="badge badge-info"><i class="far fa-clock"></i> 5 mins</small>
-                                <div class="tools">
-                                    <i class="fas fa-trash-o"></i>
-                                </div>
+                                
                             </li>
 
                             <li>
@@ -71,9 +68,7 @@
                                 </div>
                                 <span class="text">STEP-3</span>
                                 <small class="badge badge-warning"><i class="far fa-clock"></i> 10 mins</small>
-                                <div class="tools">
-                                    <i class="fas fa-trash-o"></i>
-                                </div>
+                                
                             </li>
 
                             <li>
@@ -83,9 +78,7 @@
                                 </div>
                                 <span class="text">STEP-4</span>
                                 <small class="badge badge-success"><i class="far fa-clock"></i> 15 mins</small>
-                                <div class="tools">
-                                    <i class="fas fa-trash-o"></i>
-                                </div>
+                                
                             </li>
 
                             <li>
@@ -95,9 +88,7 @@
                                 </div>
                                 <span class="text">STEP-5</span>
                                 <small class="badge badge-primary"><i class="far fa-clock"></i> 20 mins</small>
-                                <div class="tools">
-                                    <i class="fas fa-trash-o"></i>
-                                </div>
+                               
                             </li>
 
                             <li>
@@ -107,9 +98,7 @@
                                 </div>
                                 <span class="text">STEP-6</span>
                                 <small class="badge badge-secondary"><i class="far fa-clock"></i> 1 hr</small>
-                                <div class="tools">
-                                    <i class="fas fa-trash-o"></i>
-                                </div>
+                                
                             </li>
 
                         </ul>

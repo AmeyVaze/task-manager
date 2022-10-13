@@ -30,7 +30,7 @@
                     <div class="card-header bg-warning">
                         <h3 class="card-title">
                             <i class="ion ion-clipboard mr-1"></i>
-                            The tasks assigned are
+                            The steps are as follows
                         </h3>
                     </div>
                     <!-- /.card-header -->
@@ -38,53 +38,49 @@
                         <ul class="todo-list" data-widget="todo-list">
 
                             <li class="mb-4 bg-olive">
-                                <a href="{{ url('/task-list') }}" style="cursor:pointer;">
                                     <!-- todo text -->
-                                    <span class="text"> [MODULE NAME] [SUB MODULE NAME] [FOR CLIENT] [FROM MANAGER]</span>
+                                    <span class="text">STEP DESCRIPTION</span>
                                     <!-- Emphasis label -->
+                                    <small class="badge badge-danger"><i class="far fa-clock"></i> 2 mins</small>
                                     <!-- General tools such as edit or delete-->
-                                </a>
                             </li>
 
                             <li class="mb-4 bg-olive">
-                                <a href="{{ url('/task-list') }}">
-                                    <span class="text">[MODULE NAME] [SUB MODULE NAME] [FOR CLIENT] [FROM MANAGER]</span>
-                                   
-                                </a>
+                                    <span class="text">STEP DESCRIPTION</span>
+                                    <small class="badge badge-info"><i class="far fa-clock"></i> 5 mins</small>
                             </li>
 
                             <li class="mb-4 bg-olive">
-                                <a href="{{ url('/task-list') }}">
-                                    <span class="text">[MODULE NAME] [SUB MODULE NAME] [FOR CLIENT] [FROM MANAGER]</span>
-                                    
-                                </a>
+                                    <span class="text">STEP DESCRIPTION</span>
+                                    <small class="badge badge-warning"><i class="far fa-clock"></i> 10 mins</small>
+                            
                             </li>
 
                             <li class="mb-4 bg-olive">
-                                <a href="{{ url('/task-list') }}">
-                                    <span class="text">[MODULE NAME] [SUB MODULE NAME] [FOR CLIENT] [FROM MANAGER]</span>
-                                    
-                                </a>
+                                
+                                    <span class="text">STEP DESCRIPTION</span>
+                                    <small class="badge badge-success"><i class="far fa-clock"></i> 15 mins</small>
+                               
                             </li>
 
                             <li class="mb-4 bg-olive">
-                                <a href="{{ url('/task-list') }}">
-                                    <span class="text">[MODULE NAME] [SUB MODULE NAME] [FOR CLIENT] [FROM MANAGER]</span>
-                                    
-                                </a>
+                               
+                                    <span class="text">STEP DESCRIPTION</span>
+                                    <small class="badge badge-primary"><i class="far fa-clock"></i> 20 mins</small>
+                               
                             </li>
 
                             <li class="mb-4 bg-olive">
-                                <a href="{{ url('/task-list') }}">
-                                    <span class="text">[MODULE NAME] [SUB MODULE NAME] [FOR CLIENT] [FROM MANAGER]</span>
-            
-                                </a>
+                                
+                                    <span class="text">STEP DESCRIPTION</span>
+                                    <small class="badge badge-secondary"><i class="far fa-clock"></i> 1 hr</small>
+                                
                             </li>
 
                         </ul>
                     </div>
 
-                    <!-- <a href="{{ url('/task-completion-successfull') }}" class="btn btn-success btn-lg active mb-2" role="button" aria-pressed="true">Mark as done</a> -->
+                    <a href="{{ url('/task-completion-successfull') }}" class="btn btn-primary btn-lg active mb-2" role="button" aria-pressed="true">Mark as done</a>
                 </div>
                 <!-- /.card -->
             </div>
@@ -92,5 +88,4 @@
     </section>
     <!-- /.content -->
 </div>
-<!-- /.content-wrapper -->
 @endsection

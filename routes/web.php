@@ -79,6 +79,13 @@ Route::get('/report-issue', function () {
     return view('employee.reportissue');
 });
 
+
+Route::get('/task-list', function () {
+    return view('employee.tasklist');
+});
+
+
+
 Route::get('/assigned-tasks-employee', function () {
     return view('employee.assignedtasksemployee');
 });
@@ -117,5 +124,10 @@ Route::get('/register-clients', function () {
 
 Route::get('/client-list', function () {
     return view('admin.clientlist');
+});
+
+
+Route::get('/employee-roles-table', function () {
+    return view('admin.employeerolestable');
 });
 
