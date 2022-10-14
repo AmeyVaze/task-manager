@@ -16,10 +16,10 @@
 
 <body>
     <nav class="navbar bg-dark">
-        <a class="navbar-brand m-5" style="color: white; font-size: 40px;">Task Flow Manager</a>
+        <a class="navbar-brand mx-5" style="color: white; font-size: 30px;">Task Flow Manager</a>
         <div class="float-right mx-5">
-            <a href="{{ url('/register') }}" class="btn btn-lg btn-primary">Register</a>
-            <a href="{{ url('/login') }}" class="btn btn-lg btn-success">Login</a>
+            <a href="{{ url('/register') }}" class="btn btn-primary mx-2">Register</a>
+            <a href="{{ url('/login') }}" class="btn btn-success mx-2">Login</a>
         </div>
     </nav>
 </body>
