@@ -27,7 +27,7 @@
             <!-- Small boxes (Stat box) -->
             <div class="row">
                 <!-- ./col -->
-                <div class="col-lg-4 col-6">
+                <div class="col-lg-3 col-6">
                     <!-- small box -->
                     <div class="small-box bg-warning">
                         <div class="inner">
@@ -42,7 +42,7 @@
                 </div>
 
                 <!-- ./col -->
-                <div class="col-lg-4 col-6">
+                <div class="col-lg-3 col-6">
                     <!-- small box -->
                     <div class="small-box bg-success">
                         <div class="inner">
@@ -57,7 +57,7 @@
                 </div>
 
                 <!-- ./col -->
-                <div class="col-lg-4 col-6">
+                <div class="col-lg-3 col-6">
                     <!-- small box -->
                     <div class="small-box bg-orange">
                         <div class="inner">
@@ -68,6 +68,21 @@
                             <i class="ion ion-person-add"></i>
                         </div>
                         <a href="{{ url('/register-employees') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- ./col -->
+                <div class="col-lg-3 col-6">
+                    <!-- small box -->
+                    <div class="small-box bg-primary">
+                        <div class="inner">
+                            <h3>33</h3>
+                            <p>Register Internal Companies</p>
+                        </div>
+                        <div class="icon">
+                            <i class="ion ion-person-add"></i>
+                        </div>
+                        <a href="{{ url('/register-internal-companies') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
 

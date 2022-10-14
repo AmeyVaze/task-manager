@@ -102,6 +102,15 @@ Route::get('/create-invoice', function () {
     return view('front-desk.createinvoice');
 });
 
+Route::get('/pending-for-invoice', function () {
+    return view('front-desk.pendingforinvoice');
+});
+
+Route::get('/invoiced-clients', function () {
+    return view('front-desk.invoicedclients');
+});
+
+
 
 Route::get('/admin-dashboard', function () {
     return view('admin.admindashboard');
@@ -120,6 +129,10 @@ Route::get('/employee-list', function () {
 
 Route::get('/register-clients', function () {
     return view('admin.registerclients');
+});
+
+Route::get('/register-internal-companies', function () {
+    return view('admin.registerinternalcompanies');
 });
 
 Route::get('/client-list', function () {

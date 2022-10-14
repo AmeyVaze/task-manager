@@ -46,6 +46,7 @@
                                 <td>California, USA</td>
                                 <td>
                                     <span class="btn btn-md btn-success" data-toggle="button" aria-pressed="true">Active</span>
+                                    <span class="btn btn-md btn-danger" data-toggle="button" aria-pressed="true">Deactivate</span>
                                 </td>
                             </tr>
 
@@ -56,6 +57,10 @@
                                 <td>brandonrodgers@gmail.com</td>
                                 <td>XXX4233288</td>
                                 <td>Worchestershire, UK</td>
+                                <td>
+                                    <span class="btn btn-md btn-success" data-toggle="button" aria-pressed="true">Active</span>
+                                    <span class="btn btn-md btn-danger" data-toggle="button" aria-pressed="true">Deactivate</span>
+                                </td>
                             </tr>
 
                             <tr>
@@ -65,15 +70,23 @@
                                 <td>krishnapublications@gmail.com</td>
                                 <td>XXX847455</td>
                                 <td>Bangalore, IND</td>
+                                <td>
+                                    <span class="btn btn-md btn-success" data-toggle="button" aria-pressed="true">Active</span>
+                                    <span class="btn btn-md btn-danger" data-toggle="button" aria-pressed="true">Deactivate</span>
+                                </td>
                             </tr>
 
-                            <<tr>
+                            <tr>
                                 <td>4</td>
                                 <td>Bacca Bucci Shoes</td>
                                 <td>Private Ltd.</td>
                                 <td>baccabuccishoes@gmail.com</td>
                                 <td>XXX9903030</td>
                                 <td>Gurgaon, IND</td>
+                                <td>
+                                    <span class="btn btn-md btn-success" data-toggle="button" aria-pressed="true">Active</span>
+                                    <span class="btn btn-md btn-danger" data-toggle="button" aria-pressed="true">Deactivate</span>
+                                </td>
                                 </tr>
                         </tbody>
                     </table>

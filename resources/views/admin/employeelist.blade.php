@@ -23,7 +23,7 @@
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-10">
-                <table class="table table-striped">
+                    <table class="table table-striped">
                         <thead>
                             <tr>
                                 <th>#</th>
@@ -32,6 +32,7 @@
                                 <th>E-mail</th>
                                 <th>Phone Number</th>
                                 <th>Role</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
 
@@ -43,6 +44,13 @@
                                 <td>larry@gmail.com</td>
                                 <td>XXX355352</td>
                                 <td>Administrator</td>
+                                <td>
+                                    <span>
+                                        <a href="{{ url('/') }}">
+                                            <button class="btn btn-sm btn-danger">Delete Employee</button>
+                                        </a>
+                                    </span>
+                                </td>
                             </tr>
 
                             <tr>
@@ -52,6 +60,13 @@
                                 <td>john@gmail.com</td>
                                 <td>XXX4233288</td>
                                 <td>Manager</td>
+                                <td>
+                                    <span>
+                                        <a href="{{ url('/') }}">
+                                            <button class="btn btn-sm btn-danger">Delete Employee</button>
+                                        </a>
+                                    </span>
+                                </td>
                             </tr>
 
                             <tr>
@@ -61,15 +76,29 @@
                                 <td>galgadot@gmail.com</td>
                                 <td>XXX847455</td>
                                 <td>Chief Manager</td>
+                                <td>
+                                    <span>
+                                        <a href="{{ url('/') }}">
+                                            <button class="btn btn-sm btn-danger">Delete Employee</button>
+                                        </a>
+                                    </span>
+                                </td>
                             </tr>
 
-                            <<tr>
+                            <tr>
                                 <td>4</td>
                                 <td>Nitin</td>
                                 <td>Rana</td>
                                 <td>ranaji@gmail.com</td>
                                 <td>XXX9903030</td>
                                 <td>Front Desk</td>
+                                <td>
+                                    <span>
+                                        <a href="{{ url('/') }}">
+                                            <button class="btn btn-sm btn-danger">Delete Employee</button>
+                                        </a>
+                                    </span>
+                                </td>
                                 </tr>
                         </tbody>
                     </table>

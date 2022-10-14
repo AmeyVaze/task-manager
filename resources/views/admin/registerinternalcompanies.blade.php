@@ -12,7 +12,7 @@
                 <div class="col-sm-6 float-right">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Register Clients</li>
+                        <li class="breadcrumb-item active">Register Internal Companies</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -24,12 +24,13 @@
         <div class="col-6 register-box mb-5">
             <div class="card card-primary">
                 <div class="card-header text-center bg-purple">
-                    <p class="login-box-msg"><h4><b>Register a new client</b></h4></p>
+                    <p class="login-box-msg"><h4><b>Register Internal Company</b></h4></p>
                 </div>
                 <div class="card-body">
+
                     <form action="../../index.html" method="post">
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Client name">
+                            <input type="text" class="form-control" placeholder="Company Name">
                             <div class="input-group-append">
                                 <div class="input-group-text">
                                     <span class="fas fa-user"></span>
