@@ -28,7 +28,9 @@ return new class extends Migration
 
             $table->unsignedBigInteger('client_id');
             $table->foreign('client_id')->references('client_id')->on('clients');
-              
+             
+            $table->unsignedBigInteger('submoule_id');
+            $table->foreign('submodule_id')->references('submodule_id')->on('submodules');
             $table->timestamps();
         });
     }

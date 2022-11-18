@@ -13,11 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('task_list', function (Blueprint $table) {
-            $table->id('task_list_id');
-            $table->string('task_list_name');
-            $table->unsignedBigInteger('submodule_id');
-            $table->foreign('submodule_id')->references('submodule_id')->on('submodles');
+        Schema::create('modules', function (Blueprint $table) {
+            $table->id('module_id');
+            $table->string('module_name');
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('task_list');
+        Schema::dropIfExists('modules');
     }
 };
