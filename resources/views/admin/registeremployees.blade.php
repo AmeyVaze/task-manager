@@ -29,7 +29,7 @@
                 <div class="card-body">
                     <form action="../../index.html" method="post">
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="First name">
+                            <input type="text" class="form-control" placeholder="First name" id="first_name">
                             <div class="input-group-append">
                                 <div class="input-group-text">
                                     <span class="fas fa-user"></span>
@@ -38,7 +38,7 @@
                         </div>
 
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Last name">
+                            <input type="text" class="form-control" placeholder="Last name" id="last_name">
                             <div class="input-group-append">
                                 <div class="input-group-text">
                                     <span class="fas fa-user"></span>
@@ -48,7 +48,7 @@
 
 
                         <div class="input-group mb-3">
-                            <input type="email" class="form-control" placeholder="Email">
+                            <input type="email" class="form-control" placeholder="Email" id="email">
                             <div class="input-group-append">
                                 <div class="input-group-text">
                                     <span class="fas fa-envelope"></span>
@@ -57,7 +57,7 @@
                         </div>
 
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Phone Number">
+                            <input type="text" class="form-control" placeholder="Phone Number" id="phone_no">
                             <div class="input-group-append">
                                 <div class="input-group-text">
                                     <span class="fas fa-phone"></span>
@@ -66,7 +66,7 @@
                         </div>
 
                         <div>
-                            <select class="form-control select2 mb-3" style="width: 100%;">
+                            <select class="form-control select2 mb-3" style="width: 100%;" id="role_id">
                                 <option selected="selected">Select role</option>
                                 <option>Administrator</option>
                                 <option>Chief Manager</option>
@@ -77,7 +77,7 @@
                         </div>
 
                         <div class="input-group mb-3">
-                            <input type="password" class="form-control" placeholder="Password">
+                            <input type="password" class="form-control" placeholder="Password" id="password">
                             <div class="input-group-append">
                                 <div class="input-group-text">
                                     <span class="fas fa-lock"></span>
