@@ -31,6 +31,7 @@ return new class extends Migration
              
             $table->unsignedBigInteger('submodule_id');
             $table->foreign('submodule_id')->references('submodule_id')->on('submodules');
+            
             $table->timestamps();
         });
     }
