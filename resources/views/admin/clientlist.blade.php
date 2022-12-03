@@ -27,67 +27,39 @@
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Company Name</th>
-                                <th>Organization Type</th>
-                                <th>E-mail</th>
-                                <th>Phone Number</th>
+                                <th>Client Name</th>
+                                <th>Type Of Organisation</th>
+                                <th>PAN</th>
+                                <th>TAN</th>
+                                <th>GSTIN</th>
                                 <th>Registered Address</th>
-                                <th>Action</th>
+                                <th>Billing Address</th>
+                                <th>Contact Name</th>
+                                <th>Contact Phone</th>
+                                <th>Contact Email</th>
                             </tr>
                         </thead>
 
                         <tbody>
+                            @foreach ($clients as $client)
                             <tr>
-                                <td>1</td>
-                                <td>Tesla Motors</td>
-                                <td>Private Ltd.</td>
-                                <td>teslamotors@gmail.com</td>
-                                <td>XXXX2338699</td>
-                                <td>California, USA</td>
+                                <td>{{ $client->id }}</td>
+                                <td>{{ $client->client_name }}</td>
+                                <td>{{ $client->type_of_org }}</td>
+                                <td>{{ $client->PAN }}</td>
+                                <td>{{ $client->TAN }}</td>
+                                <td>{{ $client->GSTIN }}</td>
+                                <td>{{ $client->registered_address }}</td>
+                                <td>{{ $client->billing_address }}</td>
+                                <td>{{ $client->cp_name }}</td>
+                                <td>{{ $client->cp_phone }}</td>
+                                <td>{{ $client->cp_email }}</td>
                                 <td>
                                     <span class="btn btn-md btn-success" data-toggle="button" aria-pressed="true">Active</span>
                                     <span class="btn btn-md btn-danger" data-toggle="button" aria-pressed="true">Deactivate</span>
                                 </td>
                             </tr>
-
-                            <tr>
-                                <td>2</td>
-                                <td>Brandon Rodgers</td>
-                                <td>LLP</td>
-                                <td>brandonrodgers@gmail.com</td>
-                                <td>XXX4233288</td>
-                                <td>Worchestershire, UK</td>
-                                <td>
-                                    <span class="btn btn-md btn-success" data-toggle="button" aria-pressed="true">Active</span>
-                                    <span class="btn btn-md btn-danger" data-toggle="button" aria-pressed="true">Deactivate</span>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>3</td>
-                                <td>Krishna Publications</td>
-                                <td>Private Ltd.</td>
-                                <td>krishnapublications@gmail.com</td>
-                                <td>XXX847455</td>
-                                <td>Bangalore, IND</td>
-                                <td>
-                                    <span class="btn btn-md btn-success" data-toggle="button" aria-pressed="true">Active</span>
-                                    <span class="btn btn-md btn-danger" data-toggle="button" aria-pressed="true">Deactivate</span>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>4</td>
-                                <td>Bacca Bucci Shoes</td>
-                                <td>Private Ltd.</td>
-                                <td>baccabuccishoes@gmail.com</td>
-                                <td>XXX9903030</td>
-                                <td>Gurgaon, IND</td>
-                                <td>
-                                    <span class="btn btn-md btn-success" data-toggle="button" aria-pressed="true">Active</span>
-                                    <span class="btn btn-md btn-danger" data-toggle="button" aria-pressed="true">Deactivate</span>
-                                </td>
-                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

@@ -27,8 +27,8 @@ return new class extends Migration
             $table->string('cp_phone')->unique();
             $table->string('cp_email')->unique();
 
-            $table->unsignedBigInteger('company_id');
-            $table->foreign('company_id')->references('company_id')->on('internal_companies');
+            // $table->unsignedBigInteger('company_id')->default('101');
+            // $table->foreign('company_id')->references('company_id')->on('internal_companies');
 
             $table->timestamps();
         });

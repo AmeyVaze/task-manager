@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RegisterClientsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -131,13 +132,20 @@ Route::get('/register-clients', function () {
     return view('admin.registerclients');
 });
 
+Route::post(
+    '/store_client_details', 
+    [RegisterClientsController::class, 'store']
+);
+
 Route::get('/register-internal-companies', function () {
     return view('admin.registerinternalcompanies');
 });
 
-Route::get('/client-list', function () {
-    return view('admin.clientlist');
-});
+Route::get(
+    '/client-list', 
+    [RegisterClientsController::class, 'index']
+    // return view('admin.clientlist');
+);
 
 
 Route::get('/employee-roles-table', function () {
