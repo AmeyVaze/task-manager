@@ -45,7 +45,7 @@ class RegisterClientsController extends Controller
 
     public function index()
     {
-        $clients = DB::table('clients')->select('client_name', 'type_of_org', 'PAN', 'TAN', 'GSTIN', 'registered_address', 'billing_address', 'cp_name', 'cp_phone', 'cp_phone')->get();
-        return view('admin.clientlist', compact('clients', $clients));
+        $clients = DB::table('clients')->select('client_id','client_name', 'type_of_org', 'PAN', 'TAN', 'GSTIN', 'registered_address', 'billing_address', 'cp_name', 'cp_phone', 'cp_email')->get();
+        return view('admin.clientlist')->with('clients',$clients);
     }
 }
