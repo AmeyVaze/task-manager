@@ -38,7 +38,12 @@
                     <form action="{{ url('store_client_details') }}" method="post">
                     @csrf
                         <div class="input-group mb-3">
-                            <input type="text" name="client_name" class="form-control" placeholder="Client name">
+                            <input type="text" name="client_name" class="form-control" placeholder="Client name" required>
+
+                            @error('client_name')
+                                <span class="text-danger">{{$message}}</span>
+                            @enderror
+                            
                             <div class="input-group-append">
                                 <div class="input-group-text">
                                     <span class="fas fa-user"></span>
@@ -47,7 +52,7 @@
                         </div>
 
                         <div>
-                            <select class="form-control select2 mb-3" name="type_of_org" style="width: 100%;">
+                            <select class="form-control select2 mb-3" name="type_of_org" style="width: 100%;" required>
                                 <option selected="selected">Select type of organisation</option>
                                 <option>Proprietership</option>
                                 <option>Partnership</option>
@@ -55,43 +60,65 @@
                                 <option>Private Ltd</option>
                                 <option>Banks</option>
                                 <option>Schools & Trusts</option>
+
+                                @error('type_of_org')
+                                    <span class="text-danger">{{$message}}</span>
+                                @enderror
+
                             </select>
                         </div>
 
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="pan" placeholder="PAN">
+                            <input type="text" class="form-control" name="pan" placeholder="PAN" required>
                             <div class="input-group-append">
                                 <div class="input-group-text">
                                     <span class="fas fa-hashtag"></span>
                                 </div>
                             </div>
+
+                            @error('pan')
+                                <span class="text-danger">{{$message}}</span>
+                            @enderror
+
                         </div>
 
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="tan" placeholder="TAN">
+                            <input type="text" class="form-control" name="tan" placeholder="TAN" required>
                             <div class="input-group-append">
                                 <div class="input-group-text">
                                     <span class="fas fa-hashtag"></span>
                                 </div>
                             </div>
+
+                            @error('tan')
+                                <span class="text-danger">{{$message}}</span>
+                            @enderror
                         </div>
 
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="gstin" placeholder="GSTIN">
+                            <input type="text" class="form-control" name="gstin" placeholder="GSTIN" required>
                             <div class="input-group-append">
                                 <div class="input-group-text">
                                     <span class="fas fa-hashtag"></span>
                                 </div>
                             </div>
+
+                            @error('gstin')
+                                <strong><span class="text-danger">{{$message}}</span></strong>
+                            @enderror
                         </div>
 
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="registered_address" placeholder="Registered address">
+                            <input type="text" class="form-control" name="registered_address" placeholder="Registered address" required>
                             <div class="input-group-append">
                                 <div class="input-group-text">
                                     <span class="fas fa-location-arrow"></span>
                                 </div>
                             </div>
+
+                            @error('registered_address')
+                                <span class="text-danger">{{$message}}</span>
+                            @enderror
                         </div>
 
                         <div>
@@ -103,7 +130,7 @@
                         </div>
 
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="billing_address" placeholder="Billing address">
+                            <input type="text" class="form-control" name="billing_address" placeholder="Billing address" required>
                             <div class="input-group-append">
                                 <div class="input-group-text">
                                     <input type="checkbox">
@@ -114,33 +141,49 @@
                                     </span>
                                 </div>
                             </div>
+
+                            @error('billing_address')
+                                <span class="text-danger">{{$message}}</span>
+                            @enderror
                         </div>
 
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="cp_name" placeholder="Contact person name">
+                            <input type="text" class="form-control" name="cp_name" placeholder="Contact person name" required>
                             <div class="input-group-append">
                                 <div class="input-group-text">
                                     <span class="fas fa-user"></span>
                                 </div>
                             </div>
+
+                            @error('cp_name')
+                                <span class="text-danger">{{$message}}</span>
+                            @enderror
                         </div>
 
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="cp_phone" placeholder="Contact person phone number">
+                            <input type="text" class="form-control" name="cp_phone" placeholder="Contact person phone number" required>
                             <div class="input-group-append">
                                 <div class="input-group-text">
                                     <span class="fas fa-phone"></span>
                                 </div>
                             </div>
+
+                            @error('cp_phone')
+                                <span class="text-danger">{{$message}}</span>
+                            @enderror
                         </div>
 
                         <div class="input-group mb-3">
-                            <input type="email" class="form-control" name="cp_email" placeholder="Contact person email">
+                            <input type="email" class="form-control" name="cp_email" placeholder="Contact person email" required>
                             <div class="input-group-append">
                                 <div class="input-group-text">
                                     <span class="fas fa-envelope"></span>
                                 </div>
                             </div>
+
+                            @error('cp_email')
+                                <span class="text-danger">{{$message}}</span>
+                            @enderror
                         </div>
 
                         <div class="row">
