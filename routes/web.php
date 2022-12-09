@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterClientsController;
+use App\Http\Controllers\TaskAssignmentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,8 @@ Route::get('/', function () {
 Route::get('/assign-tasks', function () {
     return view('manager.assigntasks');
 });
+
+Route::post('/store_module', [TaskAssignmentController::class, 'store']);
 
 Route::get('/select-submodule', function () {
     return view('manager.selectsubmodule');

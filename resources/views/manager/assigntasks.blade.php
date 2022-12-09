@@ -30,12 +30,14 @@
                         Select MODULE
                     </div>
                     <div class="card-body">
-                        <form>
+
+                        <form action="{{ url('store_module') }}" method="POST">
+                            @csrf
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                    <label class="input-group-text" for="inputGroupSelect01">Module</label>
+                                    <label class="input-group-text" for="module">Module</label>
                                 </div>
-                                <select class="custom-select" id="inputGroupSelect01">
+                                <select class="custom-select" id="module" name="module" required>
                                     <option selected>Select the module.....</option>
                                     <option value="GST">GST</option>
                                     <option value="TDS & TCS">TDS</option>
@@ -44,7 +46,7 @@
                                 </select>
                             </div>
                             
-                            <a href="{{ url('/select-submodule') }}" class="btn btn-success btn-lg active" role="button" aria-pressed="true">Save</a>
+                            <button type="submit">Save</button>
                         </form>
                     </div>
                 </div>
