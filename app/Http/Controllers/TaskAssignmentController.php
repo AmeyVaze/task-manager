@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 
 class TaskAssignmentController extends Controller
 {
-    function update_modules()
+    public function update_modules()
     {
         $modules = DB::select('select * from modules');
 
