@@ -7,11 +7,12 @@ use Illuminate\Support\Facades\DB;
 
 class TaskAssignmentController extends Controller
 {
-    public function store(Request $request)
+    function update_modules()
     {
-        //storing the module selected in a variable
-        $module = $request->module;
+        $modules = DB::select('select * from modules');
 
         
+
+        return view('manager.assigntasks')->with('modules', $modules);
     }
 }

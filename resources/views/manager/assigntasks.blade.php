@@ -31,22 +31,25 @@
                     </div>
                     <div class="card-body">
 
-                        <form action="{{ url('store_module') }}" method="POST">
-                            @csrf
+                        <form>
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <label class="input-group-text" for="module">Module</label>
                                 </div>
                                 <select class="custom-select" id="module" name="module" required>
-                                    <option selected>Select the module.....</option>
+
+                                    @foreach ($modules as $module)
+                                        <option value="{{ $module->module_name }}">{{ $module->module_name }}</option>
+                                    @endforeach
+                                    {{-- <option selected>Select the module.....</option>
                                     <option value="GST">GST</option>
                                     <option value="TDS & TCS">TDS</option>
                                     <option value="ITR">ITR</option>
-                                    <option value="AUDITS">AUDITS</option>
+                                    <option value="AUDITS">AUDITS</option> --}}
                                 </select>
                             </div>
                             
-                            <button type="submit">Save</button>
+                            <a href="{{ url('/select-submodule') }}" class="btn btn-success btn-lg active mb-2" role="button" aria-pressed="true">Save</a>
                         </form>
                     </div>
                 </div>

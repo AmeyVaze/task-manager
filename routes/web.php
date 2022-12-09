@@ -21,11 +21,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/assign-tasks', function () {
-    return view('manager.assigntasks');
-});
-
-Route::post('/store_module', [TaskAssignmentController::class, 'store']);
+Route::get('/assign-tasks', [TaskAssignmentController::class, 'update_modules']);
 
 Route::get('/select-submodule', function () {
     return view('manager.selectsubmodule');
