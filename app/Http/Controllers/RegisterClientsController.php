@@ -38,19 +38,19 @@ class RegisterClientsController extends Controller
             'type_of_org.required' => 'Select the type of organization from the dropdown',
 
             //pan
-            'pan.required' => 'PAN no. is required',
-            'pan.size' => 'PAN no. should have only 10 characters',
-            'pan.unique' => 'PAN no. already exists in our records',
+            'pan.required' => 'PAN is required',
+            'pan.size' => 'PAN should have only 10 characters',
+            'pan.unique' => 'PAN already exists in our records',
 
             //tan
-            'tan.required' => 'TAN no. is required',
-            'tan.size' => 'TAN no. should have only 10 characters',
-            'tan.unique' => 'TAN no. already exists in our records',
+            'tan.required' => 'TAN is required',
+            'tan.size' => 'TAN should have only 10 characters',
+            'tan.unique' => 'TAN already exists in our records',
 
             //gstin
-            'GSTIN.required' => 'GSTIN no. is required',
-            'GSTIN.size' => 'GSTIN no. should have only 15 characters',
-            'GSTIN.unique' => 'GSTIN no. already exists in our records',
+            'gstin.required' => 'GSTIN is required',
+            'gstin.size' => 'GSTIN should have only 15 characters',
+            'gstin.unique' => 'GSTIN already exists in our records',
 
             //registered_address
             'registered_address.required' => 'Registered address is required',
@@ -98,12 +98,12 @@ class RegisterClientsController extends Controller
 
         if($query)
         {
-            return redirect('/register-clients')->with('status','Client details have been inserted successfully!');
+            return redirect('/register-clients')->with('status','Client registered successfully!');
         }
 
         else
         {
-            return redirect('/register-clients')->with('status','Client details not entered, please retry!');
+            return redirect('/register-clients')->with('status','Client not registered, please retry after some time!');
         }
     }
 

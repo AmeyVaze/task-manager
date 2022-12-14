@@ -62,7 +62,7 @@
                                 <option>Schools & Trusts</option>
 
                                 @error('type_of_org')
-                                    <span class="text-danger">{{$message}}</span>
+                                    <strong><span class="text-danger">{{$message}}</span></strong>
                                 @enderror
 
                             </select>
@@ -77,7 +77,7 @@
                             </div>
 
                             @error('pan')
-                                <span class="text-danger">{{$message}}</span>
+                                <strong><span class="text-danger">{{$message}}</span></strong>
                             @enderror
 
                         </div>
@@ -91,7 +91,7 @@
                             </div>
 
                             @error('tan')
-                                <span class="text-danger">{{$message}}</span>
+                                <strong><span class="text-danger">{{$message}}</span></strong>
                             @enderror
                         </div>
 
@@ -117,7 +117,7 @@
                             </div>
 
                             @error('registered_address')
-                                <span class="text-danger">{{$message}}</span>
+                                <strong><span class="text-danger">{{$message}}</span></strong>
                             @enderror
                         </div>
 
@@ -143,7 +143,7 @@
                             </div>
 
                             @error('billing_address')
-                                <span class="text-danger">{{$message}}</span>
+                                <strong><span class="text-danger">{{$message}}</span></strong>
                             @enderror
                         </div>
 
@@ -156,7 +156,7 @@
                             </div>
 
                             @error('cp_name')
-                                <span class="text-danger">{{$message}}</span>
+                                <strong><span class="text-danger">{{$message}}</span></strong>
                             @enderror
                         </div>
 
@@ -169,7 +169,7 @@
                             </div>
 
                             @error('cp_phone')
-                                <span class="text-danger">{{$message}}</span>
+                                <strong><span class="text-danger">{{$message}}</span></strong>
                             @enderror
                         </div>
 
@@ -182,7 +182,7 @@
                             </div>
 
                             @error('cp_email')
-                                <span class="text-danger">{{$message}}</span>
+                                <strong><span class="text-danger">{{$message}}</span></strong>
                             @enderror
                         </div>
 
