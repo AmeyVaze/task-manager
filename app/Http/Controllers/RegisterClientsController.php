@@ -19,13 +19,16 @@ class RegisterClientsController extends Controller
             'client_name' => ['required', 'string', 'max:100'],
             'type_of_org' => ['required', 'string'],
             'pan' => ['required', 'string', 'alpha_num', 'size:10', 'unique:clients'],
-            'tan' => ['required', 'string', 'alpha_num', 'size:10', 'unique:clients'],
-            'gstin' => ['required', 'string', 'alpha_num', 'size:15', 'unique:clients'],
             'registered_address' => ['required', 'string', 'max:255'],
             'billing_address' => ['required', 'string', 'max:255'],
             'cp_name' => ['required', 'string', 'max:100'],
             'cp_phone' => ['required', 'string', 'min:10', 'max:15', 'unique:clients'],
             'cp_email' => ['required', 'string', 'email', 'unique:clients'],
+
+            //non mandatory fields
+            'tan' => ['required','string', 'alpha_num', 'size:10', 'unique:clients'],
+            'gstin' => ['required', 'string', 'alpha_num', 'size:15', 'unique:clients'],
+            
         ],
         [
             // ERROR MESSAGES TO BE SHOWN IF THE INPUT FIELDS ARE NOT PROPERLY VALIDATED
@@ -98,12 +101,12 @@ class RegisterClientsController extends Controller
 
         if($query)
         {
-            return redirect('/register-clients')->with('status','Client registered successfully!');
+            return redirect('/register-clients')->with('success', 'Client registered successfully!');
         }
 
         else
         {
-            return redirect('/register-clients')->with('status','Client not registered, please retry after some time!');
+            return redirect('/register-clients')->with('failure', 'Client not registered, please retry after some time!');
         }
     }
 

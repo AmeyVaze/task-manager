@@ -21,11 +21,12 @@
     <!-- /.content-header -->
 
     <div class="container mt-4">
-        @if(session('status'))
+        @if(session('success'))
           <div class="alert alert-success">
-              {{ session('status') }}
+              {{ session('success') }}
           </div>
         @endif
+    </div>
 
     <div class="row justify-content-center">
         <div class="col-6 register-box mb-5">
@@ -80,6 +81,14 @@
                                 <strong><span class="text-danger">{{$message}}</span></strong>
                             @enderror
 
+                        </div>
+
+                        <div>
+                            <span>
+                                <p style="color: indigo;">
+                                    **TAN and GSTIN are not mandatory**
+                                </p>
+                            </span>
                         </div>
 
                         <div class="input-group mb-3">

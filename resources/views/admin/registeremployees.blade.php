@@ -20,6 +20,14 @@
     </div>
     <!-- /.content-header -->
 
+    <div class="container mt-4">
+        @if(session('success'))
+          <div class="alert alert-success">
+              {{ session('success') }}
+          </div>
+        @endif
+    </div>
+
     <div class="row justify-content-center">
         <div class="col-6 register-box">
             <div class="card card-primary">
@@ -27,9 +35,10 @@
                     <p class="login-box-msg"><h4><b>Register a new employee</b></h4></p>
                 </div>
                 <div class="card-body">
-                    <form action="../../index.html" method="post">
+                    <form action="{{ url('store_employee_details') }}" method="POST">
+                        @csrf
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="First name" id="first_name">
+                            <input type="text" class="form-control" placeholder="First name" name="first_name" required id="first_name">
                             <div class="input-group-append">
                                 <div class="input-group-text">
                                     <span class="fas fa-user"></span>
@@ -38,7 +47,7 @@
                         </div>
 
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Last name" id="last_name">
+                            <input type="text" class="form-control" placeholder="Last name" name="last_name" required id="last_name">
                             <div class="input-group-append">
                                 <div class="input-group-text">
                                     <span class="fas fa-user"></span>
@@ -48,7 +57,7 @@
 
 
                         <div class="input-group mb-3">
-                            <input type="email" class="form-control" placeholder="Email" id="email">
+                            <input type="email" class="form-control" placeholder="Email" name="email" required id="email">
                             <div class="input-group-append">
                                 <div class="input-group-text">
                                     <span class="fas fa-envelope"></span>
@@ -57,7 +66,7 @@
                         </div>
 
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Phone Number" id="phone_no">
+                            <input type="text" class="form-control" placeholder="Phone Number" name="phone_no" required id="phone_no">
                             <div class="input-group-append">
                                 <div class="input-group-text">
                                     <span class="fas fa-phone"></span>
@@ -66,7 +75,7 @@
                         </div>
 
                         <div>
-                            <select class="form-control select2 mb-3" style="width: 100%;" id="role_id">
+                            <select class="form-control select2 mb-3" style="width: 100%;" name="role" required id="role">
                                 <option selected="selected">Select role</option>
                                 <option>Administrator</option>
                                 <option>Chief Manager</option>
@@ -77,7 +86,7 @@
                         </div>
 
                         <div class="input-group mb-3">
-                            <input type="password" class="form-control" placeholder="Password" id="password">
+                            <input type="password" class="form-control" placeholder="Password" name="password" required id="password">
                             <div class="input-group-append">
                                 <div class="input-group-text">
                                     <span class="fas fa-lock"></span>
@@ -86,7 +95,7 @@
                         </div>
 
                         <div class="input-group mb-3">
-                            <input type="password" class="form-control" placeholder="Confirm password">
+                            <input type="password" class="form-control" placeholder="Confirm password" name="c_password" required id="c_password">
                             <div class="input-group-append">
                                 <div class="input-group-text">
                                     <span class="fas fa-lock"></span>

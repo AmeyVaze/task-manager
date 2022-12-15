@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterClientsController;
 use App\Http\Controllers\TaskAssignmentController;
+use App\Http\Controllers\RegisterEmployeesController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -122,9 +124,11 @@ Route::get('/register-employees', function () {
     return view('admin.registeremployees');
 });
 
-Route::get('/employee-list', function () {
-    return view('admin.employeelist');
-});
+Route::post(
+    '/store_employee_details', 
+    [RegisterEmployeesController::class, 'store']);
+
+Route::get('/employee-list', [RegisterEmployeesController::class, 'index']);
 
 
 Route::get('/register-clients', function () {

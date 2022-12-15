@@ -37,69 +37,22 @@
                         </thead>
 
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Larry</td>
-                                <td>Page</td>
-                                <td>larry@gmail.com</td>
-                                <td>XXX355352</td>
-                                <td>Administrator</td>
-                                <td>
-                                    <span>
-                                        <a href="{{ url('/') }}">
-                                            <button class="btn btn-sm btn-danger">Delete Employee</button>
-                                        </a>
-                                    </span>
-                                </td>
-                            </tr>
+                            @foreach ($employees as $employee)
+                                <tr>
+                                    <td>{{ $employee->user_id }}</td>
+                                    <td>{{ $employee->first_name }}</td>
+                                    <td>{{ $employee->last_name }}</td>
+                                    <td>{{ $employee->email }}</td>
+                                    <td>{{ $employee->phone_number }}</td>
+                                    <td>
+                                        <span class="badge bg-success">{{ $employee->role }}</span>
+                                    </td>
 
-                            <tr>
-                                <td>2</td>
-                                <td>John</td>
-                                <td>Doe</td>
-                                <td>john@gmail.com</td>
-                                <td>XXX4233288</td>
-                                <td>Manager</td>
-                                <td>
-                                    <span>
-                                        <a href="{{ url('/') }}">
-                                            <button class="btn btn-sm btn-danger">Delete Employee</button>
-                                        </a>
-                                    </span>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>3</td>
-                                <td>Gal</td>
-                                <td>Gadot</td>
-                                <td>galgadot@gmail.com</td>
-                                <td>XXX847455</td>
-                                <td>Chief Manager</td>
-                                <td>
-                                    <span>
-                                        <a href="{{ url('/') }}">
-                                            <button class="btn btn-sm btn-danger">Delete Employee</button>
-                                        </a>
-                                    </span>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>4</td>
-                                <td>Nitin</td>
-                                <td>Rana</td>
-                                <td>ranaji@gmail.com</td>
-                                <td>XXX9903030</td>
-                                <td>Front Desk</td>
-                                <td>
-                                    <span>
-                                        <a href="{{ url('/') }}">
-                                            <button class="btn btn-sm btn-danger">Delete Employee</button>
-                                        </a>
-                                    </span>
-                                </td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-danger">Delete</button>
+                                    </td>
                                 </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
