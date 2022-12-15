@@ -112,13 +112,9 @@ Route::get('/invoiced-clients', function () {
     return view('front-desk.invoicedclients');
 });
 
-
-
-Route::get('/admin-dashboard', function () {
-    return view('admin.admindashboard');
-});
-
-
+// Route::get('/admin-dashboard', function () {
+//     return view('admin.admindashboard');
+// });
 
 Route::get('/register-employees', function () {
     return view('admin.registeremployees');
@@ -138,6 +134,12 @@ Route::get('/register-clients', function () {
 Route::post(
     '/store_client_details', 
     [RegisterClientsController::class, 'store']
+);
+
+Route::get(
+    '/admin-dashboard', 
+    [RegisterClientsController::class, 
+    'RegisterClientsCount']
 );
 
 Route::get('/register-internal-companies', function () {

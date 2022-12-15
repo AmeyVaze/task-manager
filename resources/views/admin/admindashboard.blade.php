@@ -31,7 +31,7 @@
                     <!-- small box -->
                     <div class="small-box bg-warning">
                         <div class="inner">
-                            <h3>53<sup style="font-size: 20px">%</sup></h3>
+                            <h3>6</h3>
                             <p>Manage Roles</p>
                         </div>
                         <div class="icon">
@@ -46,7 +46,7 @@
                     <!-- small box -->
                     <div class="small-box bg-success">
                         <div class="inner">
-                            <h3>Count to be updated dynamically</h3>
+                            <h3>6</h3>
                             <p>Register Clients</p>
                         </div>
                         <div class="icon">
