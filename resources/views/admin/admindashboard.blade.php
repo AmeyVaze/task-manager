@@ -46,7 +46,7 @@
                     <!-- small box -->
                     <div class="small-box bg-success">
                         <div class="inner">
-                            <h3>23</h3>
+                            <h3>Count to be updated dynamically</h3>
                             <p>Register Clients</p>
                         </div>
                         <div class="icon">
