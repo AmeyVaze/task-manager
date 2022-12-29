@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Client;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\DB;
 
@@ -112,13 +111,7 @@ class RegisterClientsController extends Controller
 
     public function index()
     {
-        $clients = DB::table('clients')->select('client_id','client_name', 'type_of_org', 'PAN', 'TAN', 'GSTIN', 'registered_address', 'billing_address', 'cp_name', 'cp_phone', 'cp_email')->get();
+        $clients = DB::table('clients')->select('client_id','client_name', 'type_of_org', 'PAN', 'TAN', 'GSTIN', 'registered_address', 'billing_address', 'cp_name', 'cp_phone', 'cp_email', 'is_active')->get();
         return view('admin.clientlist')->with('clients', $clients);
-    }
-
-    public function RegisterClientsCount()
-    {
-        $registered_client_count = DB::select('select count(*) as client_count from clients');
-        return view('admin.admindashboard')->with('count', $registered_client_count);
     }
 }
