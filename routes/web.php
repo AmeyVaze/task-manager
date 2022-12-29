@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterClientsController;
 use App\Http\Controllers\TaskAssignmentController;
 use App\Http\Controllers\RegisterEmployeesController;
+use App\Http\Controllers\AdminDashboardCountsController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -23,7 +24,23 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/assign-tasks', [TaskAssignmentController::class, 'update_modules']);
+Route::get(
+    '/assign-tasks', 
+    [TaskAssignmentController::class, 
+    'update_modules']
+);
+
+Route::get(
+    '/set_selected_module',
+    [TaskAssignmentController::class,
+    'set_selected_module']
+);
+
+Route::get(
+    '/store_dates',
+    [TaskAssignmentController::class,
+    'store_dates']
+);
 
 Route::get('/select-submodule', function () {
     return view('manager.selectsubmodule');
@@ -112,9 +129,7 @@ Route::get('/invoiced-clients', function () {
     return view('front-desk.invoicedclients');
 });
 
-// Route::get('/admin-dashboard', function () {
-//     return view('admin.admindashboard');
-// });
+//--------------ADMIN ROUTES--------------
 
 Route::get('/register-employees', function () {
     return view('admin.registeremployees');
@@ -122,10 +137,39 @@ Route::get('/register-employees', function () {
 
 Route::post(
     '/store_employee_details', 
-    [RegisterEmployeesController::class, 'store']);
+    [RegisterEmployeesController::class, 
+    'store']
+);
 
-Route::get('/employee-list', [RegisterEmployeesController::class, 'index']);
+Route::get(
+    '/employee-list', 
+    [RegisterEmployeesController::class, 
+    'index']
+);
 
+Route::get(
+    'show_employee/{id}',
+    [RegisterEmployeesController::class,
+    'show_employee_details']
+);
+
+Route::post(
+    'update_employee_details/{id}',
+    [RegisterEmployeesController::class,
+    'update_employee_details']
+);
+
+Route::get(
+    '/activate_employee/{id}',
+    [RegisterEmployeesController::class,
+    'activate_employee']
+);
+
+Route::get(
+    '/deactivate_employee/{id}',
+    [RegisterEmployeesController::class,
+    'deactivate_employee']
+);
 
 Route::get('/register-clients', function () {
     return view('admin.registerclients');
@@ -133,13 +177,14 @@ Route::get('/register-clients', function () {
 
 Route::post(
     '/store_client_details', 
-    [RegisterClientsController::class, 'store']
+    [RegisterClientsController::class, 
+    'store']
 );
 
 Route::get(
     '/admin-dashboard', 
-    [RegisterClientsController::class, 
-    'RegisterClientsCount']
+    [AdminDashboardCountsController::class, 
+    'count']
 );
 
 Route::get('/register-internal-companies', function () {
@@ -148,8 +193,8 @@ Route::get('/register-internal-companies', function () {
 
 Route::get(
     '/client-list', 
-    [RegisterClientsController::class, 'index']
-    // return view('admin.clientlist');
+    [RegisterClientsController::class, 
+    'index']
 );
 
 

@@ -56,11 +56,11 @@
                                 <td>{{ $client->cp_phone }}</td>
                                 <td>{{ $client->cp_email }}</td>
                                 <td>
-                                    {{-- <span class="btn btn-md btn-success" data-toggle="button" aria-pressed="true">Active</span>
-                                    <span class="btn btn-md btn-danger" data-toggle="button" aria-pressed="true">Deactivate</span> --}}
-
-                                    <button class="btn btn-sm btn-success" aria-pressed="true">Activate</button>
-                                    <button class="btn btn-sm btn-danger" aria-pressed="true">Deactivate</button>
+                                    @if ($client->is_active == 1) 
+                                        <button class="btn btn-sm btn-danger" aria-pressed="true">Deactivate</button>
+                                    @else                   
+                                        <button class="btn btn-sm btn-success" aria-pressed="true">Activate</button>                         
+                                    @endif
                                 </td>
                             </tr>
                             @endforeach

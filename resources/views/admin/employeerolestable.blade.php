@@ -29,7 +29,7 @@
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
-                        <table class="table table-bordered">
+                        <table class="table table-striped">
                             <thead>
                                 <tr>
                                     <th>#</th>
@@ -48,8 +48,8 @@
                                     <td>Manager</td>
                                     <td>
                                         <a href="{{ url('/') }}">
-                                        <span class="btn btn-md bg-warning">Edit</span>
-                                        <span class="btn btn-md bg-danger">Delete</span>
+                                        <span class="btn btn-sm bg-warning">Edit</span>
+                                        <span class="btn btn-sm bg-danger">Delete</span>
                                         </a>
                                     </td>
                                 </tr>
@@ -62,8 +62,8 @@
                                     <td>Manager</td>
                                     <td>
                                         <a href="{{ url('/') }}">
-                                        <span class="btn btn-md bg-warning">Edit</span>
-                                        <span class="btn btn-md bg-danger">Delete</span>
+                                        <span class="btn btn-sm bg-warning">Edit</span>
+                                        <span class="btn btn-sm bg-danger">Delete</span>
                                         </a>
                                     </td>
                                 </tr>
@@ -76,8 +76,8 @@
                                     <td>Manager</td>
                                     <td>
                                         <a href="{{ url('/') }}">
-                                        <span class="btn btn-md bg-warning">Edit</span>
-                                        <span class="btn btn-md bg-danger">Delete</span>
+                                        <span class="btn btn-sm bg-warning">Edit</span>
+                                        <span class="btn btn-sm bg-danger">Delete</span>
                                         </a>
                                     </td>
                                 </tr>
@@ -90,8 +90,8 @@
                                     <td>Administrator</td>
                                     <td>
                                         <a href="{{ url('/') }}">
-                                        <span class="btn btn-md bg-warning">Edit</span>
-                                        <span class="btn btn-md bg-danger">Delete</span>
+                                        <span class="btn btn-sm bg-warning">Edit</span>
+                                        <span class="btn btn-sm bg-danger">Delete</span>
                                         </a>
                                     </td>
                                 </tr>
@@ -103,8 +103,8 @@
                                     <td>Employee</td>
                                     <td>
                                         <a href="{{ url('/') }}">
-                                        <span class="btn btn-md bg-warning">Edit</span>
-                                        <span class="btn btn-md bg-danger">Delete</span>
+                                        <span class="btn btn-sm bg-warning">Edit</span>
+                                        <span class="btn btn-sm bg-danger">Delete</span>
                                         </a>
                                     </td>
                                 </tr>

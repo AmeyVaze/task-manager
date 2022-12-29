@@ -20,6 +20,14 @@
     </div>
     <!-- /.content-header -->
 
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <h3><span class="badge bg-dark p-3">SUBMODULE - {{ $selected_submodule }}</span></h3>
+            </div>
+        </div>
+    </section>
+
     <!-- Main content -->
     <section class="content">
         <div class="container-fluid">
@@ -36,71 +44,17 @@
                     <!-- /.card-header -->
                     <div class="card-body">
                         <ul class="todo-list" data-widget="todo-list">
-
-                            <li>
+                            @foreach ($submodule_steps as $step)
+                            <li class="mb-3 bg-light">
                                 <!-- checkbox -->
-                                <div class="icheck-success d-inline ml-2">
-                                    <input type="checkbox" value="" name="todo1" id="todoCheck1" checked>
-                                    <label for="todoCheck1"></label>
+                                <div class="icheck-info d-inline ml-2">
+                                    <input type="checkbox" value="step" name="step" id="stepCheck" checked>
+                                    <label for="stepCheck"></label>
                                 </div>
-                                <!-- todo text -->
-                                <span>STEP-1</span>
-                                <!-- Emphasis label -->
-                                {{-- <small class="badge badge-danger"><i class="far fa-clock"></i> 2 mins</small> --}}
-                                <!-- General tools such as edit or delete-->
-                               
+                                <!-- step text -->
+                                <span><strong>{{ $step->task_list_name }}</strong></span>
                             </li>
-
-                            <li>
-                                <div class="icheck-success d-inline ml-2">
-                                    <input type="checkbox" value="" name="todo2" id="todoCheck2" checked>
-                                    <label for="todoCheck2"></label>
-                                </div>
-                                <span>STEP-2</span>
-                                {{-- <small class="badge badge-info"><i class="far fa-clock"></i> 5 mins</small> --}}
-                                
-                            </li>
-
-                            <li>
-                                <div class="icheck-success d-inline ml-2">
-                                    <input type="checkbox" value="" name="todo3" id="todoCheck3" checked>
-                                    <label for="todoCheck3"></label>
-                                </div>
-                                <span>STEP-3</span>
-                                {{-- <small class="badge badge-warning"><i class="far fa-clock"></i> 10 mins</small> --}}
-                                
-                            </li>
-
-                            <li>
-                                <div class="icheck-success d-inline ml-2">
-                                    <input type="checkbox" value="" name="todo4" id="todoCheck4" checked>
-                                    <label for="todoCheck4"></label>
-                                </div>
-                                <span>STEP-4</span>
-                                {{-- <small class="badge badge-success"><i class="far fa-clock"></i> 15 mins</small> --}}
-                                
-                            </li>
-
-                            <li>
-                                <div class="icheck-success d-inline ml-2">
-                                    <input type="checkbox" value="" name="todo5" id="todoCheck5" checked>
-                                    <label for="todoCheck5"></label>
-                                </div>
-                                <span>STEP-5</span>
-                                {{-- <small class="badge badge-primary"><i class="far fa-clock"></i> 20 mins</small> --}}
-                               
-                            </li>
-
-                            <li>
-                                <div class="icheck-success d-inline ml-2">
-                                    <input type="checkbox" value="" name="todo6" id="todoCheck6" checked>
-                                    <label for="todoCheck6"></label>
-                                </div>
-                                <span>STEP-6</span>
-                                {{-- <small class="badge badge-secondary"><i class="far fa-clock"></i> 1 hr</small> --}}
-                                
-                            </li>
-
+                            @endforeach
                         </ul>
                     </div>
 

@@ -21,12 +21,12 @@ class RegisterEmployeesController extends Controller
 
         if($query) {
             return redirect('/register-employees')
-            ->with('success', 'Employee registered successfully!');
+            ->with('success', 'Employee REGISTERED successfully!');
         }
 
         else {
             return redirect('/register-employees')
-            ->with('failure', 'Employee not registered, please retry after some time!');
+            ->with('failure', 'Employee NOT REGISTERED, please retry after some time!');
         }
     }
 
@@ -55,30 +55,26 @@ class RegisterEmployeesController extends Controller
 
         if($query){
             return redirect('/employee-list')
-            ->with('update-successfull', 'Employee details updated successfully!');
+            ->with('update-successfull', 'Employee details UPDATED successfully!');
         }
 
         else {
             return redirect('/employee-list')
-            ->with('update-failed', 'Employee details not updated, please retry after some time!');
+            ->with('update-failed', 'Employee details NOT UPDATED, please retry after some time!');
         }
     }
 
     public function deactivate_employee($id)
     {
         $query = DB::update('update users set is_active = 0 where user_id = ?', [$id]);
-
-        if($query) return redirect('/employee-list')->with('deactivate-successfull', 'Employee deactivated successfully!');
-
-        else return redirect('/employee-list')->with('deactivate-failed', 'Employee deactivation failed, please retry after some time!');
+        if($query) return redirect('/employee-list')->with('deactivate-successfull', 'Employee DEACTIVATED successfully!');
+        else return redirect('/employee-list')->with('deactivate-failed', 'Employee DEACTIVATION FAILED, please retry after some time!');
     }
 
     public function activate_employee($id)
     {
         $query = DB::update('update users set is_active = 1 where user_id = ?', [$id]);
-
-        if($query) return redirect('/employee-list')->with('activate-successfull', 'Employee activated successfully!');
-
-        else return redirect('/employee-list')->with('activate-failed', 'Employee activation failed, please retry after some time!');
+        if($query) return redirect('/employee-list')->with('activate-successfull', 'Employee ACTIVATED successfully!');
+        else return redirect('/employee-list')->with('activate-failed', 'Employee ACTIVATION FAILED, please retry after some time!');
     }    
 }

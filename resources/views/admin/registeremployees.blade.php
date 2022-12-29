@@ -32,7 +32,7 @@
         <div class="col-6 register-box">
             <div class="card card-primary">
                 <div class="card-header text-center bg-purple">
-                    <p class="login-box-msg"><h4><b>Register a new employee</b></h4></p>
+                    <p class="login-box-msg"><h4><b>Register new employee</b></h4></p>
                 </div>
                 <div class="card-body">
                     <form action="{{ url('store_employee_details') }}" method="POST">

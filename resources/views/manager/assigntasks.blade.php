@@ -31,25 +31,19 @@
                     </div>
                     <div class="card-body">
 
-                        <form>
+                        <form action="{{ url('set_selected_module') }}" method="GET">
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <label class="input-group-text" for="module">Module</label>
                                 </div>
-                                <select class="custom-select" id="module" name="module" required>
 
+                                <select class="custom-select" id="module" name="module" required>
                                     @foreach ($modules as $module)
                                         <option value="{{ $module->module_name }}">{{ $module->module_name }}</option>
                                     @endforeach
-                                    {{-- <option selected>Select the module.....</option>
-                                    <option value="GST">GST</option>
-                                    <option value="TDS & TCS">TDS</option>
-                                    <option value="ITR">ITR</option>
-                                    <option value="AUDITS">AUDITS</option> --}}
                                 </select>
                             </div>
-                            
-                            <a href="{{ url('/select-submodule') }}" class="btn btn-success btn-lg active mb-2" role="button" aria-pressed="true">Save</a>
+                            <input type="submit" class="btn btn-lg btn-success" value="Save">
                         </form>
                     </div>
                 </div>

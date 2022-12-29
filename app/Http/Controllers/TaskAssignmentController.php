@@ -29,6 +29,4 @@ class TaskAssignmentController extends Controller
         return view('manager.selectsteps', ['selected_submodule' => $selected_submodule, 'submodule_steps' => $submodule_steps]);
 
     }
-
-    
 }

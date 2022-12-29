@@ -8,7 +8,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Administrator Dashboard</h1>
+                    <h1 class="m-0"><strong>ADMINISTRATOR DASHBOARD</strong></h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -31,7 +31,7 @@
                     <!-- small box -->
                     <div class="small-box bg-warning">
                         <div class="inner">
-                            <h3>6</h3>
+                            <h3><strong>{{ $data['no_of_roles'][0]->different_roles }}</strong></h3>
                             <p>Manage Roles</p>
                         </div>
                         <div class="icon">
@@ -46,7 +46,7 @@
                     <!-- small box -->
                     <div class="small-box bg-success">
                         <div class="inner">
-                            <h3>6</h3>
+                            <h3><strong>{{ $data['registered_client_count'][0]->client_count }}</strong></h3>
                             <p>Register Clients</p>
                         </div>
                         <div class="icon">
@@ -61,7 +61,7 @@
                     <!-- small box -->
                     <div class="small-box bg-orange">
                         <div class="inner">
-                            <h3>8</h3>
+                            <h3><strong>{{ $data['registered_employee_count'][0]->employee_count }}</strong></h3>
                             <p>Register Employees</p>
                         </div>
                         <div class="icon">
@@ -76,7 +76,7 @@
                     <!-- small box -->
                     <div class="small-box bg-primary">
                         <div class="inner">
-                            <h3>33</h3>
+                            <h3><strong>{{ $data['registered_internal_company_count'][0]->internal_company_count }}</strong></h3>
                             <p>Register Internal Companies</p>
                         </div>
                         <div class="icon">
@@ -86,7 +86,7 @@
                     </div>
                 </div>
 
-
+                
             </div>
         </div><!-- /.container-fluid -->
     </section>
