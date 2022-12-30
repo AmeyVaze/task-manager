@@ -114,7 +114,6 @@
                                         <a href="{{ url('/activate_employee', $employee->user_id) }}" class="btn btn-success btn-sm">Activate</a>
                                     </td>
                                 </tr>
-
                                 @endif
                             @endforeach
                         </tbody>

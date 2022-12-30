@@ -21,7 +21,7 @@ class RegisterEmployeesController extends Controller
 
         if($query) {
             return redirect('/register-employees')
-            ->with('success', 'Employee REGISTERED successfully!');
+            ->with('success', 'Employee REGISTERED SUCCESSFULLY!');
         }
 
         else {
@@ -33,7 +33,7 @@ class RegisterEmployeesController extends Controller
     public function index()
     {
         $employees = DB::table('users')->select('user_id','first_name', 'last_name', 'email', 'phone_number', 'role', 'is_active')->get();
-        return view('admin.employeelist')->with('employees',$employees);
+        return view('admin.employeelist')->with('employees', $employees);
     }
 
     public function show_employee_details($id)
@@ -51,11 +51,11 @@ class RegisterEmployeesController extends Controller
         $role = $request->role;
 
         $query = DB::update('update users set first_name = ?, last_name = ?, email = ?, phone_number = ?, role = ? where user_id = ?', 
-        [$first_name, $last_name, $email, $phone_no, $role, $id]);
+                            [$first_name, $last_name, $email, $phone_no, $role, $id]);
 
         if($query){
             return redirect('/employee-list')
-            ->with('update-successfull', 'Employee details UPDATED successfully!');
+            ->with('update-successfull', 'Employee details UPDATED SUCCESSFULLY!');
         }
 
         else {
@@ -67,14 +67,14 @@ class RegisterEmployeesController extends Controller
     public function deactivate_employee($id)
     {
         $query = DB::update('update users set is_active = 0 where user_id = ?', [$id]);
-        if($query) return redirect('/employee-list')->with('deactivate-successfull', 'Employee DEACTIVATED successfully!');
+        if($query) return redirect('/employee-list')->with('deactivate-successfull', 'Employee DEACTIVATED SUCCESSFULLY!');
         else return redirect('/employee-list')->with('deactivate-failed', 'Employee DEACTIVATION FAILED, please retry after some time!');
     }
 
     public function activate_employee($id)
     {
         $query = DB::update('update users set is_active = 1 where user_id = ?', [$id]);
-        if($query) return redirect('/employee-list')->with('activate-successfull', 'Employee ACTIVATED successfully!');
+        if($query) return redirect('/employee-list')->with('activate-successfull', 'Employee ACTIVATED SUCCESSFULLY!');
         else return redirect('/employee-list')->with('activate-failed', 'Employee ACTIVATION FAILED, please retry after some time!');
     }    
 }

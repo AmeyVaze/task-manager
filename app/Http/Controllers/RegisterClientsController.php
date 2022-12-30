@@ -100,12 +100,12 @@ class RegisterClientsController extends Controller
 
         if($query)
         {
-            return redirect('/register-clients')->with('success', 'Client registered successfully!');
+            return redirect('/register-clients')->with('success', 'Client REGISTERED SUCCESSFULLY!');
         }
 
         else
         {
-            return redirect('/register-clients')->with('failure', 'Client not registered, please retry after some time!');
+            return redirect('/register-clients')->with('failure', 'Client NOT REGISTERED, please RETRY after some time!');
         }
     }
 
@@ -114,4 +114,45 @@ class RegisterClientsController extends Controller
         $clients = DB::table('clients')->select('client_id','client_name', 'type_of_org', 'PAN', 'TAN', 'GSTIN', 'registered_address', 'billing_address', 'cp_name', 'cp_phone', 'cp_email', 'is_active')->get();
         return view('admin.clientlist')->with('clients', $clients);
     }
+
+    public function show_client_details($id)
+    {
+        $client_details = DB::select('select * from clients where client_id = ?', [$id]);
+        return view('admin.editclientform', ['client_details' => $client_details]);
+    }
+
+    public function update_client_details(Request $request, $id)
+    {
+        $client_name = $request->client_name;
+        $type_of_org = $request->type_of_org;
+        $PAN = $request->pan;
+        $TAN = $request->tan;
+        $GSTIN = $request->gstin;
+        $registered_address = $request->registered_address;
+        $billing_address = $request->billing_address;
+        $cp_name = $request->cp_name;
+        $cp_phone = $request->cp_phone;
+        $cp_email = $request->cp_email;
+
+        $query = DB::update('update clients set client_name = ?, type_of_org = ?, PAN = ?, TAN = ?, GSTIN = ?, registered_address = ?, billing_address = ?, cp_name = ?, cp_phone = ?, cp_email = ? where client_id = ?' ,
+                            [$client_name, $type_of_org, $PAN, $TAN, $GSTIN, $registered_address, $billing_address, $cp_name, $cp_phone, $cp_email, $id]);
+
+        if($query) return redirect('/client-list')->with('update-successfull', 'Client details UPDATED SUCCESSFULLY!');
+        else return redirect('/client-list')->with('update-failed', 'Client details NOT UPDATED, please RETRY after some time!');
+    }
+
+    public function deactivate_client($id)
+    {
+        $query = DB::update('update clients set is_active = 0 where client_id = ?', [$id]);
+        if($query) return redirect('/client-list')->with('deactivate-successfull', 'Client DEACTIVATED SUCCESSFULLY!');
+        else return redirect('/client-list')->with('deactivate-failed', 'Client DEACTIVATION FAILED, please retry after some time!');
+    }
+
+    public function activate_client($id)
+    {
+        $query = DB::update('update clients set is_active = 1 where client_id = ?', [$id]);
+        if($query) return redirect('/client-list')->with('activate-successfull', 'Client ACTIVATED SUCCESSFULLY!');
+        else return redirect('/client-list')->with('activate-failed', 'Client ACTIVATION FAILED, please retry after some time!');
+    }
+
 }

@@ -171,6 +171,30 @@ Route::get(
     'deactivate_employee']
 );
 
+Route::get(
+    '/show_client_details/{id}',
+    [RegisterClientsController::class,
+    'show_client_details']
+);
+
+Route::post(
+    '/update_client_details/{id}',
+    [RegisterClientsController::class,
+    'update_client_details']
+);
+
+Route::get(
+    '/deactivate_client/{id}',
+    [RegisterClientsController::class,
+    'deactivate_client']
+);
+
+Route::get(
+    '/activate_client/{id}',
+    [RegisterClientsController::class,
+    'activate_client']
+);
+
 Route::get('/register-clients', function () {
     return view('admin.registerclients');
 });
