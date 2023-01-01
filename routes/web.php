@@ -5,6 +5,7 @@ use App\Http\Controllers\RegisterClientsController;
 use App\Http\Controllers\TaskAssignmentController;
 use App\Http\Controllers\RegisterEmployeesController;
 use App\Http\Controllers\AdminDashboardCountsController;
+use App\Http\Controllers\RegisterInternalCompaniesController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -209,6 +210,42 @@ Route::get(
     '/admin-dashboard', 
     [AdminDashboardCountsController::class, 
     'count']
+);
+
+Route::post(
+    '/store_internal_company_details',
+    [RegisterInternalCompaniesController::class,
+    'store']
+);
+
+Route::post(
+    '/update_internal_company_details/{id}',
+    [RegisterInternalCompaniesController::class,
+    'update_internal_company_details']
+);
+
+Route::get(
+    '/activate_internal_company/{id}',
+    [RegisterInternalCompaniesController::class,
+    'activate_internal_company']
+);
+
+Route::get(
+    '/deactivate_internal_company/{id}',
+    [RegisterInternalCompaniesController::class,
+    'deactivate_internal_company']
+);
+
+Route::get(
+    '/internal-company-list',
+    [RegisterInternalCompaniesController::class,
+    'index']
+);
+
+Route::get(
+    '/show_internal_company_details/{id}',
+    [RegisterInternalCompaniesController::class,
+    'show_internal_company_details']
 );
 
 Route::get('/register-internal-companies', function () {

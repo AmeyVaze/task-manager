@@ -15,6 +15,5 @@ class AdminDashboardCountsController extends Controller
 
         //returning $data with requested column names along with the dashboard view 
         return view('admin.admindashboard', ['data' => $data]);
-
     }
 }

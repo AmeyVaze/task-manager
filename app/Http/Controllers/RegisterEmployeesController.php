@@ -26,7 +26,7 @@ class RegisterEmployeesController extends Controller
 
         else {
             return redirect('/register-employees')
-            ->with('failure', 'Employee NOT REGISTERED, please retry after some time!');
+            ->with('failure', 'Employee NOT REGISTERED, please RETRY after some time!');
         }
     }
 
@@ -60,7 +60,7 @@ class RegisterEmployeesController extends Controller
 
         else {
             return redirect('/employee-list')
-            ->with('update-failed', 'Employee details NOT UPDATED, please retry after some time!');
+            ->with('update-failed', 'Employee details NOT UPDATED, please RETRY after some time!');
         }
     }
 
@@ -68,13 +68,13 @@ class RegisterEmployeesController extends Controller
     {
         $query = DB::update('update users set is_active = 0 where user_id = ?', [$id]);
         if($query) return redirect('/employee-list')->with('deactivate-successfull', 'Employee DEACTIVATED SUCCESSFULLY!');
-        else return redirect('/employee-list')->with('deactivate-failed', 'Employee DEACTIVATION FAILED, please retry after some time!');
+        else return redirect('/employee-list')->with('deactivate-failed', 'Employee DEACTIVATION FAILED, please RETRY after some time!');
     }
 
     public function activate_employee($id)
     {
         $query = DB::update('update users set is_active = 1 where user_id = ?', [$id]);
         if($query) return redirect('/employee-list')->with('activate-successfull', 'Employee ACTIVATED SUCCESSFULLY!');
-        else return redirect('/employee-list')->with('activate-failed', 'Employee ACTIVATION FAILED, please retry after some time!');
+        else return redirect('/employee-list')->with('activate-failed', 'Employee ACTIVATION FAILED, please RETRY after some time!');
     }    
 }

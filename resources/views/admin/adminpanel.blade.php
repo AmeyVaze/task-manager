@@ -238,15 +238,14 @@
                             </a>
                         </li>
 
-                        {{-- <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-database"></i>
+                        <li class="nav-item">
+                            <a href="{{ url('/internal-company-list') }}" class="nav-link">
+                                <i class="nav-icon fas fa-list"></i>
                                 <p>
-                                    Database
+                                    Internal Company List
                                 </p>
                             </a>
-                        </li> --}}
-
+                        </li>
 
                     </ul>
                 </nav>
