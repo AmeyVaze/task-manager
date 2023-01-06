@@ -12,8 +12,8 @@
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Dashboard v1</li>
+                        {{-- <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">Dashboard v1</li> --}}
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -37,7 +37,7 @@
                         <div class="icon">
                             <i class="ion ion-stats-bars"></i>
                         </div>
-                        <a href="{{ url('/employee-roles-table') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="{{ url('/employee-roles-table') }}" class="small-box-footer">Click Here  <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
 
@@ -52,7 +52,7 @@
                         <div class="icon">
                             <i class="ion ion-person-add"></i>
                         </div>
-                        <a href="{{ url('/register-clients') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="{{ url('/register-clients') }}" class="small-box-footer">Click Here  <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
 
@@ -67,7 +67,7 @@
                         <div class="icon">
                             <i class="ion ion-person-add"></i>
                         </div>
-                        <a href="{{ url('/register-employees') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="{{ url('/register-employees') }}" class="small-box-footer">Click Here  <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
 
@@ -82,7 +82,8 @@
                         <div class="icon">
                             <i class="ion ion-person-add"></i>
                         </div>
-                        <a href="{{ url('/register-internal-companies') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="{{ url('/register-internal-companies') }}" class="small-box-footer">Click Here </a>
+                        {{-- <i class="fas fa-arrow-circle-right"></i> --}}
                     </div>
                 </div>
 

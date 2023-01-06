@@ -412,7 +412,7 @@
         },
         {
             "name": "egulias/email-validator",
-            "version": "3.2.5",
+            "version": "3.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/egulias/EmailValidator.git",
@@ -420,8 +420,8 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/b531a2311709443320c786feb4519cfaf94af796",
-                "reference": "b531a2311709443320c786feb4519cfaf94af796",
+                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/0170967656f55a87054fde439ef35a22df91468b",
+                "reference": "0170967656f55a87054fde439ef35a22df91468b",
                 "shasum": ""
             },
             "require": {
@@ -467,7 +467,7 @@
             ],
             "support": {
                 "issues": "https://github.com/egulias/EmailValidator/issues",
-                "source": "https://github.com/egulias/EmailValidator/tree/3.2.5"
+                "source": "https://github.com/egulias/EmailValidator/tree/3.2.3"
             },
             "funding": [
                 {
@@ -475,7 +475,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-01-02T17:26:14+00:00"
+            "time": "2022-09-03T09:54:08+00:00"
         },
         {
             "name": "fruitcake/php-cors",
@@ -942,6 +942,7 @@
             "time": "2022-10-26T14:07:24+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "kkszymanowski/traitor",
             "version": "1.0.0",
             "source": {
@@ -1001,6 +1002,17 @@
             },
             "dist": {
                 "type": "zip",
+=======
+            "name": "laravel/framework",
+            "version": "v9.45.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/framework.git",
+                "reference": "faeb20d3fc61b69790068161ab42bcf2d5faccbc"
+            },
+            "dist": {
+                "type": "zip",
+>>>>>>> anish-branch
                 "url": "https://api.github.com/repos/laravel/framework/zipball/faeb20d3fc61b69790068161ab42bcf2d5faccbc",
                 "reference": "faeb20d3fc61b69790068161ab42bcf2d5faccbc",
                 "shasum": ""
@@ -3000,6 +3012,7 @@
             "time": "2022-12-31T22:20:34+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "santigarcor/laratrust",
             "version": "7.1.0",
             "source": {
@@ -3084,6 +3097,17 @@
             },
             "dist": {
                 "type": "zip",
+=======
+            "name": "symfony/console",
+            "version": "v6.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/console.git",
+                "reference": "0f579613e771dba2dbb8211c382342a641f5da06"
+            },
+            "dist": {
+                "type": "zip",
+>>>>>>> anish-branch
                 "url": "https://api.github.com/repos/symfony/console/zipball/0f579613e771dba2dbb8211c382342a641f5da06",
                 "reference": "0f579613e771dba2dbb8211c382342a641f5da06",
                 "shasum": ""
@@ -5801,6 +5825,7 @@
             "time": "2020-07-09T08:09:16+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "laravel/breeze",
             "version": "v1.16.1",
             "source": {
@@ -5871,6 +5896,17 @@
             },
             "dist": {
                 "type": "zip",
+=======
+            "name": "laravel/pint",
+            "version": "v1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/pint.git",
+                "reference": "6a2c0927b4f6ad4eadb5a67fe3835fdad108949d"
+            },
+            "dist": {
+                "type": "zip",
+>>>>>>> anish-branch
                 "url": "https://api.github.com/repos/laravel/pint/zipball/6a2c0927b4f6ad4eadb5a67fe3835fdad108949d",
                 "reference": "6a2c0927b4f6ad4eadb5a67fe3835fdad108949d",
                 "shasum": ""
@@ -8057,5 +8093,5 @@
         "php": "^8.0.2"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.3.0"
 }

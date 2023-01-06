@@ -7,6 +7,40 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Changes added with the latest commit - 06 January 2023 (Abhinav)
+---
++ Added the working of checkmark feature on billing address field for both Client & Internal Company registration using Javascript.
+
++ Added validations for start date, end date & statutory end date for proper processing of the provided input.
+
++ Added all the module names from the templates provided.
+
++ Removed the alert 'you load Admin LTE for demo purposes' from all the pages.
+
++ Reworked routes all over and increased the readability of the code by adding meaningful and self explanatory comments.
+
++ Added more user friendly error and success messages for any information that is to be delivered to the user on the front-end.
+
++ Checked/tested the integrity of the application considering all the changes done until now.
+
++ Made changes to the User model for registering the user.
+
++ Checked proper working of the mySQL queries written and the output generated, correcting errors if found.
+
++ Updated the composer.lock file to get all packages up to date (changed laravel version from 9.41 to 9.45* latest).
+
+
+## Reading documentations for implementing the required functionalities - 06 January 2023 (Abhinav)
+---
++ Reading documentations to implement for role based login.
+
++ Reading documentations for accessing a controller variable using javascript for updating data on the front-end without page refresh (will be used to auto-fill dates for a particular submodule when selected).
+
+**## Further details regarding the progress of the project will be added to the README.md file on a regular basis with changes made, date and the name of the person ##**
+
+For further queries regarding any of the functions/changes mentioned above, please send an e-mail to Abhinav Sharma via [19co01@aitdgoa.edu.in](mailto:19co01@aitdgoa.edu.in). All queries will be promptly addressed.
+
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
@@ -60,37 +94,3 @@ In order to ensure that the Laravel community is welcoming to all, please review
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-
-
-## Changes added with the latest commit - 06 January 2023 (Abhinav)
----
-+ Added the working of checkmark feature on billing address field for both Client & Internal Company registration using Javascript.
-
-+ Added validations for start date, end date & statutory end date for proper processing of the provided input.
-
-+ Added all the module names from the templates provided.
-
-+ Removed the alert 'you load Admin LTE for demo purposes' from all the pages.
-
-+ Reworked routes all over and increased the readability of the code by adding meaningful and self explanatory comments.
-
-+ Added more user friendly error and success messages for any information that is to be delivered to the user on the front-end.
-
-+ Checked/tested the integrity of the application considering all the changes done until now.
-
-+ Made changes to the User model for registering the user.
-
-+ Checked proper working of the mySQL queries written and the output generated, correcting errors if found.
-
-+ Updated the composer.lock file to get all packages up to date (changed laravel version from 9.41 to 9.45* latest).
-
-
-## Reading documentations for implementing the required functionalities - 06 January 2023 (Abhinav)
----
-+ Reading documentations to implement for role based login.
-
-+ Reading documentations for accessing a controller variable using javascript for updating data on the front-end without page refresh (will be used to auto-fill dates for a particular submodule when selected).
-
-**## Further details regarding the progress of the project will be added to the README.md file on a regular basis with changes made, date and the name of the person ##**
-
-For further queries regarding any of the functions/changes mentioned above, please send an e-mail to Abhinav Sharma via [19co01@aitdgoa.edu.in](mailto:19co01@aitdgoa.edu.in). All queries will be promptly addressed.
