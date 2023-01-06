@@ -412,6 +412,7 @@
         },
         {
             "name": "egulias/email-validator",
+<<<<<<< HEAD
             "version": "3.2.3",
             "source": {
                 "type": "git",
@@ -422,6 +423,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/0170967656f55a87054fde439ef35a22df91468b",
                 "reference": "0170967656f55a87054fde439ef35a22df91468b",
+=======
+            "version": "3.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/egulias/EmailValidator.git",
+                "reference": "5f35e41eba05fdfbabd95d72f83795c835fb7ed2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/5f35e41eba05fdfbabd95d72f83795c835fb7ed2",
+                "reference": "5f35e41eba05fdfbabd95d72f83795c835fb7ed2",
+>>>>>>> anish-branch
                 "shasum": ""
             },
             "require": {
@@ -467,7 +480,11 @@
             ],
             "support": {
                 "issues": "https://github.com/egulias/EmailValidator/issues",
+<<<<<<< HEAD
                 "source": "https://github.com/egulias/EmailValidator/tree/3.2.3"
+=======
+                "source": "https://github.com/egulias/EmailValidator/tree/3.2.4"
+>>>>>>> anish-branch
             },
             "funding": [
                 {
@@ -475,7 +492,11 @@
                     "type": "github"
                 }
             ],
+<<<<<<< HEAD
             "time": "2022-09-03T09:54:08+00:00"
+=======
+            "time": "2022-12-30T14:09:25+00:00"
+>>>>>>> anish-branch
         },
         {
             "name": "fruitcake/php-cors",
