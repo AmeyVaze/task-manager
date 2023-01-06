@@ -36,7 +36,7 @@
 
 + Reading documentations for accessing a controller variable using javascript for updating data on the front-end without page refresh (will be used to auto-fill dates for a particular submodule when selected).
 
-**## Further details regarding the progress of the project will be added to the README.md file on a regular basis with changes made, date and the name of the person ##**
+** Further details regarding the progress of the project will be added to the README.md file on a regular basis with changes made, date and the name of the person **
 
 For further queries regarding any of the functions/changes mentioned above, please send an e-mail to Abhinav Sharma via [19co01@aitdgoa.edu.in](mailto:19co01@aitdgoa.edu.in). All queries will be promptly addressed.
 
