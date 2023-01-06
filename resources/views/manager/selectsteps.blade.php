@@ -48,8 +48,7 @@
                             <li class="mb-3 bg-light">
                                 <!-- checkbox -->
                                 <div class="icheck-info d-inline ml-2">
-                                    <input type="checkbox" value="step" name="step" id="stepCheck" checked>
-                                    <label for="stepCheck"></label>
+                                    <input type="checkbox" value="step" name="step" checked>
                                 </div>
                                 <!-- step text -->
                                 <span><strong>{{ $step->task_list_name }}</strong></span>

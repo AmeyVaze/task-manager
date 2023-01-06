@@ -124,7 +124,7 @@
                         </div>
 
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="registered_address" value="{{ old('registered_address') }}" placeholder="Registered address">
+                            <input type="text" class="form-control" id="registered_address_input" name="registered_address" value="{{ old('registered_address') }}" placeholder="Registered address">
                             <div class="input-group-append">
                                 <div class="input-group-text">
                                     <span class="fas fa-location-arrow"></span>
@@ -141,10 +141,10 @@
                         </div>
 
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="billing_address" value="{{ old('billing_address') }}" placeholder="Billing address">
+                            <input type="text" class="form-control" id="billing_address_input" name="billing_address" value="{{ old('billing_address') }}" placeholder="Billing address">
                             <div class="input-group-append">
                                 <div class="input-group-text">
-                                    <input type="checkbox">
+                                    <input type="checkbox" id="billing_address_check">
                                 </div>
                                 <div class="input-group-text">
                                     <span>
@@ -196,4 +196,7 @@
         <!-- /.register-box -->
     </div>
 </div>
+
+<script src="{{ asset('scripts/auto_billing_address.js') }}" defer></script>
+
 @endsection

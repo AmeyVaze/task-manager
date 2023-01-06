@@ -37,7 +37,7 @@ Route::get(
     'set_selected_module']
 );
 
-Route::get(
+Route::post(
     '/store_dates',
     [TaskAssignmentController::class,
     'store_dates']
