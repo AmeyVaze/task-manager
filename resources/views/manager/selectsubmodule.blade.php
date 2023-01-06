@@ -20,6 +20,26 @@
     </div>
     <!-- /.content-header -->
 
+   {{-- Fetching validation errors, if any and create a popup container specifying the errors --}}
+   <div class="row justify-content-center">
+    @if ($errors->any())
+        <div class="col-8 mb-5 card">
+            <div class="card-header text-center bg-danger">
+                OOPS! WE RAN INTO SOME PROBLEMS
+            </div>
+            <div class="card-body bg-light">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>
+                            {{ $error }}
+                        </li>
+                    @endforeach
+                </ul>
+            </div>
+        </div>
+    @endif
+   </div>
+
     <section class="content">
         <div class="container-fluid">
             <div class="row justify-content-center">
@@ -40,13 +60,14 @@
                     </div>
                     <div class="card-body">
 
-                        <form action="{{ url('store_dates') }}" method="GET">
+                        <form action="{{ url('store_dates') }}" method="POST">
+                            @csrf
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <label class="input-group-text" for="custom-select">Submodule</label>
                                 </div>
 
-                                <select class="custom-select" id="select_submodule" name="submodule" required>
+                                <select class="custom-select" id="submodule" name="submodule" onchange="getSelectedSubmodule()" required>
                                     @foreach ($submodules_list as $submodule)
                                         <option value="{{ $submodule->submodule_name }}">{{ $submodule->submodule_name }}</option>
                                     @endforeach
@@ -59,21 +80,21 @@
                                     <h3 class="card-title">ASSIGN DATES</h3>
                                 </div>
                                 <div class="card-body">
-                                    <div class="form-group">
 
+                                    <div class="form-group">                               
                                         <label for="start_date" class="pb-3">Start date</label>
-                                        <input type="date" name="start_date" id="start_date" name="start_date">
+                                        <input type="date" name="start_date" id="start_date">
                                         <br>
 
                                         <label for="end_date" class="pb-3">End date</label>
-                                        <input type="date" name="end_date" id="end_date" name="end_date">
+                                        <input type="date" name="end_date" id="end_date">
                                         <br>
 
                                         <label for="statutory_end_date">Statutory end date</label>
-                                        <input type="date" name="statutory_end_date" id="statutory_end_date" name="statutory_end_date">
+                                        <input type="date" name="statutory_end_date" id="statutory_end_date">
                                         <br> 
-
                                     </div>
+
                                 </div>
                                 <!-- /.card -->
                             </div>
@@ -87,4 +108,6 @@
     <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
+
+<script src="{{ asset('scripts/dynamic_update_submodule_dates.js') }}" defer></script>
 @endsection
