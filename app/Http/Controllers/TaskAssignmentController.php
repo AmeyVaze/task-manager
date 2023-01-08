@@ -36,7 +36,7 @@ class TaskAssignmentController extends Controller
         $selected_submodule = $request->submodule;
 
         //fetching steps here
-        $submodule_steps = DB::select('select task_list_name from task_list where submodule_id = (select submodule_id from submodules where submodule_name = ? ) ', [$selected_submodule]);
+        $submodule_steps = DB::select('select task_list_id, task_list_name from task_list where submodule_id = (select submodule_id from submodules where submodule_name = ? ) ', [$selected_submodule]);
         
         //inserting the dates here
         $insert_dates = DB::update('update submodules set start_date = ?, int_end_date = ?, stat_end_date = ? where submodule_name = ?',
