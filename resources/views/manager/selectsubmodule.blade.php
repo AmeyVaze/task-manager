@@ -83,15 +83,15 @@
 
                                     <div class="form-group">                               
                                         <label for="start_date" class="pb-3">Start date</label>
-                                        <input type="date" name="start_date" id="start_date">
+                                        <input value="{{ old('start_date') }}" type="date" name="start_date" id="start_date">
                                         <br>
 
                                         <label for="end_date" class="pb-3">End date</label>
-                                        <input type="date" name="end_date" id="end_date">
+                                        <input value="{{ old('end_date') }}" type="date" name="end_date" id="end_date">
                                         <br>
 
                                         <label for="statutory_end_date">Statutory end date</label>
-                                        <input type="date" name="statutory_end_date" id="statutory_end_date">
+                                        <input value="{{ old('statutory_end_date') }}" type="date" name="statutory_end_date" id="statutory_end_date">
                                         <br> 
                                     </div>
 
