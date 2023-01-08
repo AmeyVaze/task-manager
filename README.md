@@ -1,11 +1,12 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="/public/dist/img/AdminLTELogo.png" width="400" alt="Task Manager Logo"></a></p>
+<p align="center"><a href="https://github.com/abhinavjames2002/task-manager" target="_blank"><img src="/public/dist/img/AdminLTELogo.png" width="300" alt="Task Manager Logo"></a>TASK MANAGER</p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Changes added with the latest minor commit - 8th January 2023 (Abhinav)
+---
++ Modified the **'/select-steps'** page due to errors while selecting/unselecting the steps from the list of steps.
+
++ Updated the mySQL query to fetch the **'task_list_id'** so that each step has a different id; Solves the error mentioned above.
+
++ Added some corrections on the **'/select-submodule'** page to fetch the previous input value in case of validation errors that refreshes the page and previous input is lost.
 
 
 ## Changes added with the latest commit - 06 January 2023 (Abhinav)
@@ -42,7 +43,7 @@
 For further queries regarding any of the functions/changes mentioned above, please send an e-mail to Abhinav Sharma via [19co01@aitdgoa.edu.in](mailto:19co01@aitdgoa.edu.in). All queries will be promptly addressed.
 
 
-## About Laravel
+<!-- ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
@@ -94,4 +95,4 @@ In order to ensure that the Laravel community is welcoming to all, please review
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT). -->
