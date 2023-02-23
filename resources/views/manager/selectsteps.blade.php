@@ -46,18 +46,12 @@
                         <ul class="todo-list" data-widget="todo-list">
                             @foreach ($submodule_steps as $step)
                             <li class="mb-3 bg-light">
-                                <!-- checkbox -->
-                                <div class="icheck-info d-inline ml-2">
-                                    <input type="checkbox" value="step" name="step" checked>
-                                </div>
-                                <!-- step text -->
+                                <input type="checkbox" name="task_list_name" id="{{ $step->task_list_id }}" checked>
                                 <span><strong>{{ $step->task_list_name }}</strong></span>
                             </li>
                             @endforeach
                         </ul>
                     </div>
-
-                    
                     <a href="{{ url('/select-employee') }}" class="btn btn-success btn-lg active mb-2" role="button" aria-pressed="true">Select Employee</a>
                 </div>
                 <!-- /.card -->
