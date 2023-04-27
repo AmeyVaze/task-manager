@@ -1,5 +1,6 @@
 @extends('admin.adminpanel')
 
+
 @section('content')
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -15,8 +16,8 @@
                         <li class="breadcrumb-item active">Client List</li>
                     </ol>
                 </div>
-                <a href ={{url('/deactivated-client-list')}}>
-                    <button class="btn btn-danger">DEACTIVATED CLIENTS</button>
+                <a href ={{url('/client-list')}}>
+                    <button class="btn btn-success">ACTIVATED CLIENTS</button>
                 </a>
             </div>
         </div><!-- /.container-fluid -->
@@ -88,13 +89,12 @@
                         </thead>
 
                         <tbody>
-                            @foreach ($clients as $client)
-                                {{-- @if ($client->is_active == 1) --}}
+                            @foreach ($deactivated_clients as $client)
                                 <tr>
                                     <td>{{ $client->client_id }}</td>
                                     <td>{{ $client->client_name }}</td>
                                     <td>
-                                        <span class="badge bg-success">{{ $client->type_of_org }}</span>
+                                        <span class="badge bg-danger">{{ $client->type_of_org }}</span>
                                     </td>
                                     <td>{{ $client->PAN }}</td>
                                     <td>{{ $client->TAN }}</td>
@@ -105,32 +105,10 @@
                                     <td>{{ $client->cp_phone }}</td>
                                     <td>{{ $client->cp_email }}</td>
                                     <td>
-                                        <a href="{{ url('show_client_details', $client->client_id) }}" class="btn btn-sm btn-warning">Edit</a>
-                                        <a href="{{ url('deactivate_client', $client->client_id) }}" class="btn btn-sm btn-danger">Deactivate</a>
+                                        <a href="{{ url('/activate_client', $client->client_id) }}" class="btn btn-sm btn-success">Activate</a>
                                     </td>
                                 </tr>
-
-                                {{-- @else
-                                <tr>
-                                    <td><del>{{ $client->client_id }}</del></td>
-                                    <td><del>{{ $client->client_name }}</del></td>
-                                    <td>
-                                        <span class="badge bg-danger"><del>{{ $client->type_of_org }}</del></span>
-                                    </td>
-                                    <td><del>{{ $client->PAN }}</del></td>
-                                    <td><del>{{ $client->TAN }}</del></td>
-                                    <td><del>{{ $client->GSTIN }}</del></td>
-                                    <td><del>{{ $client->registered_address }}</del></td>
-                                    <td><del>{{ $client->billing_address }}</del></td>
-                                    <td><del>{{ $client->cp_name }}</del></td>
-                                    <td><del>{{ $client->cp_phone }}</del></td>
-                                    <td><del>{{ $client->cp_email }}</del></td>
-                                    <td>
-                                        <a href="{{ url('activate_client', $client->client_id) }}" class="btn btn-sm btn-success">Activate</a>
-                                    </td>
-                                </tr>
-                                @endif --}}
-                            @endforeach
+                             @endforeach
                         </tbody>
                     </table>
                 </div>
