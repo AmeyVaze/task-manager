@@ -32,7 +32,8 @@ class RegisterEmployeesController extends Controller
 
     public function index()
     {
-        $employees = DB::table('users')->select('user_id','first_name', 'last_name', 'email', 'phone_number', 'role', 'is_active')->get();
+        // $employees = DB::table('users')->select('user_id','first_name', 'last_name', 'email', 'phone_number', 'role', 'is_active')->get();
+        $employees = DB::select('select user_id, first_name, last_name, email, phone_number, role from users where is_active = 1');
         return view('admin.employeelist')->with('employees', $employees);
     }
 
@@ -74,7 +75,13 @@ class RegisterEmployeesController extends Controller
     public function activate_employee($id)
     {
         $query = DB::update('update users set is_active = 1 where user_id = ?', [$id]);
-        if($query) return redirect('/employee-list')->with('activate-successfull', 'Employee ACTIVATED SUCCESSFULLY!');
+        if($query) return redirect('/deactivated-employee-list')->with('activate-successfull', 'Employee ACTIVATED SUCCESSFULLY!');
         else return redirect('/employee-list')->with('activate-failed', 'Employee ACTIVATION FAILED, please RETRY after some time!');
     }    
+
+    public function deactivated_employee_list()
+    {
+        $deactivated_employees = DB::select('select user_id, first_name, last_name, email, phone_number, role from users where is_active = 0');
+        return view('admin.deactivatedemployeelist', ['deactivated_employees' => $deactivated_employees]);
+    }
 }

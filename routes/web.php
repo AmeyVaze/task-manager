@@ -60,9 +60,11 @@ Route::get('/select-steps', function () {
     return view('manager.selectsteps');
 });
 
-Route::get('/select-employee', function () {
-    return view('manager.selectemployee');
-});
+Route::get(
+    '/select-employee',
+    [TaskAssignmentController::class,
+    'list_registered_employees']
+);
 
 Route::get('/task-assign-successfull', function () {
     return view('manager.taskassignsuccessfull');
@@ -135,6 +137,12 @@ Route::get('/invoiced-clients', function () {
 Route::get('/register-employees', function () {
     return view('admin.registeremployees');
 });
+
+Route::get(
+    '/deactivated-employee-list',
+    [RegisterEmployeesController::class,
+    'deactivated_employee_list']
+);
 
 Route::post(
     '/store_employee_details', 

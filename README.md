@@ -1,4 +1,10 @@
-<p align="center"><a href="https://github.com/abhinavjames2002/task-manager" target="_blank"><img src="/public/dist/img/AdminLTELogo.png" width="300" alt="Task Manager Logo"></a>TASK MANAGER</p>
+<p align="center"><a href="https://github.com/abhinavjames2002/task-manager" target="_blank"><img src="/public/dist/img/AdminLTELogo.png" width="300" alt="Task Manager Logo"></a></p>
+
+## Changes added on 29th March
+---
++ Added the list of registered employees to select an employee for a task along with a check mark option.
+
++ Added package 'laravel livewire' for various needs.
 
 ## Changes added with the latest minor commit - 8th January 2023 (Abhinav)
 ---
