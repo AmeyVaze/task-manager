@@ -47,4 +47,11 @@ class TaskAssignmentController extends Controller
         if($insert_dates) return view('manager.selectsteps', ['selected_submodule' => $selected_submodule, 'submodule_steps' => $submodule_steps]);
 
     }
+
+    public function list_registered_employees()
+    {
+        //select user_id, (first_name, last_name) as full_name, role, email, phone_number from users
+        $registered_employees = DB::select('select user_id, concat(first_name, " ", last_name) as full_name, role, email, phone_number from users');
+        return view('manager.selectemployee', ['registered_employees' => $registered_employees]);
+    }
 }

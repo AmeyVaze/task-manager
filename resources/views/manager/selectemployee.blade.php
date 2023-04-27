@@ -28,120 +28,35 @@
 
                 <div class="col-10 card">
                     <div class="card-header bg-primary">
-                        Select employee from the list
+                        <b>LIST OF REGISTERED EMPLOYEES</b>
                     </div>
                     <div class="card-body">
                         <table class="table table-hover">
                             <thead>
                                 <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">First Name</th>
-                                    <th scope="col">Last Name</th>
-                                    <th>
-                                        Action
-                                    </th>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Role</th>
+                                    <th scope="col">E-mail</th>
+                                    <th scope="col">Phone Number</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach ($registered_employees as $employee)
                                 <tr>
-                                    <th scope="row">1</th>
-                                    <td>John</td>
-                                    <td>Doe</td>
-                                    
+                                    <th scope="row">{{ $employee->user_id }}</th>
+                                    <td>{{ $employee->full_name }}</td>
+                                    <td><span class="badge bg-success">{{ $employee->role }}</span></td>
+                                    <td>{{ $employee->email }}</td>
+                                    <td>{{ $employee->phone_number }}</td>
                                     <td>
                                         <span>
                                             <input type="checkbox">
                                         </span>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Jessy</td>
-                                    <td>Jones</td>
-                                    
-                                    <td>
-                                        <span>
-                                            <input type="checkbox">
-                                        </span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td>Larry</td>
-                                    <td>Page</td>
-                                    
-                                    <td>
-                                        <span>
-                                            <input type="checkbox">
-                                        </span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">4</th>
-                                    <td>Jack</td>
-                                    <td>Sparrow</td>
-                                    
-                                    <td>
-                                        <span>
-                                            <input type="checkbox">
-                                        </span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">5</th>
-                                    <td>Gal</td>
-                                    <td>Gadot</td>
-                                    
-                                    <td>
-                                        <span>
-                                            <input type="checkbox">
-                                        </span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">6</th>
-                                    <td>Larry</td>
-                                    <td>Page</td>
-                                    
-                                    <td>
-                                        <span>
-                                            <input type="checkbox">
-                                        </span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">7</th>
-                                    <td>Abhinav</td>
-                                    <td>Sharma</td>
-                                    
-                                    <td>
-                                        <span>
-                                            <input type="checkbox">
-                                        </span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">8</th>
-                                    <td>Aaimaan</td>
-                                    <td>Beig</td>
-                                
-                                    <td>
-                                        <span>
-                                            <input type="checkbox">
-                                        </span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">9</th>
-                                    <td>Anish</td>
-                                    <td>Kulkarni</td>
-                                
-                                    <td>
-                                        <span>
-                                            <input type="checkbox">
-                                        </span>
-                                    </td>
-                                </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
