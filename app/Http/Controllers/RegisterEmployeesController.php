@@ -45,6 +45,7 @@ class RegisterEmployeesController extends Controller
 
     public function update_employee_details(Request $request, $id)
     {
+        
         $first_name = $request->first_name;
         $last_name = $request->last_name;
         $email = $request->email;

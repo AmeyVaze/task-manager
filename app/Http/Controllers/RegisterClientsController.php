@@ -94,19 +94,23 @@ class RegisterClientsController extends Controller
 
     public function update_client_details(Request $request, $id)
     {
-        $client_name = $request->client_name;
-        $type_of_org = $request->type_of_org;
-        $PAN = $request->pan;
-        $TAN = $request->tan;
-        $GSTIN = $request->gstin;
-        $registered_address = $request->registered_address;
-        $billing_address = $request->billing_address;
-        $cp_name = $request->cp_name;
-        $cp_phone = $request->cp_phone;
-        $cp_email = $request->cp_email;
+        $is_validated = $request->validate([
+            'client_name' => ['required', 'string', 'max:255'],
+            'type_of_org' => ['required', 'string'],
+            'pan' => ['required', 'alpha_num', 'size:10'],
+            'tan' => ['nullable', 'sometimes', 'alpha_num', 'size:15'],
+            'gstin' => ['nullable', 'sometimes', 'alpha_num', 'size:15'],
+            'registered_address' => ['required', 'string', 'max:255'],
+            'billing_address' => ['required', 'string', 'max:255'],
+            'cp_name' => ['required', 'string', 'max:100'],
+            'cp_phone' => ['required', 'digits_between:10,15'],
+            'cp_email' => ['required', 'email', 'max:100']
+        ]);
 
         $query = DB::update('update clients set client_name = ?, type_of_org = ?, PAN = ?, TAN = ?, GSTIN = ?, registered_address = ?, billing_address = ?, cp_name = ?, cp_phone = ?, cp_email = ? where client_id = ?' ,
-                            [$client_name, $type_of_org, $PAN, $TAN, $GSTIN, $registered_address, $billing_address, $cp_name, $cp_phone, $cp_email, $id]);
+                            [
+                                $is_validated['client_name'], $is_validated['type_of_org'], $is_validated['pan'], $is_validated['tan'], $is_validated['gstin'], $is_validated['registered_address'], $is_validated['billing_address'], $is_validated['cp_name'], $is_validated['cp_phone'], $is_validated['cp_email'], $id
+                            ]);
 
         if($query) return redirect('/client-list')->with('update-successfull', 'Client details UPDATED SUCCESSFULLY!');
         else return redirect('/client-list')->with('update-failed', 'Client details NOT UPDATED, please RETRY after some time!');
