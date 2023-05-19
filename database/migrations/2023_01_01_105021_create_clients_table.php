@@ -21,8 +21,8 @@ return new class extends Migration
             $table->text('registered_address');
             $table->text('billing_address');
             $table->string('PAN')->unique();
-            $table->string('TAN')->unique()->nullable()->default('not given');
-            $table->string('GSTIN')->unique()->nullable()->default('not given');
+            $table->string('TAN')->unique()->nullable();
+            $table->string('GSTIN')->unique()->nullable();
             $table->string('cp_name');
             $table->string('cp_phone')->unique();
             $table->string('cp_email')->unique();
