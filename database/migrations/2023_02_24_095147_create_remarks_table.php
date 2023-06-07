@@ -19,7 +19,7 @@ return new class extends Migration
 
             $table->unsignedBigInteger('task_id');
             $table->foreign('task_id')->references('task_id')->on('tasks');
-            
+
             $table->timestamps();
         });
     }
@@ -34,3 +34,4 @@ return new class extends Migration
         Schema::dropIfExists('remarks');
     }
 };
+

@@ -15,8 +15,8 @@
                         <li class="breadcrumb-item active">Employee List</li>
                     </ol>
                 </div>
-                <a href={{ url('/deactivated-employee-list') }}>
-                    <button class="btn btn-danger"><b>DEACTIVATED EMPLOYEES</b></button>
+                <a href={{ url('/employee-list') }}>
+                    <button class="btn btn-success"><b>LIST OF ACTIVATED EMPLOYEES</b></button>
                 </a>
             </div>
         </div><!-- /.container-fluid -->
@@ -84,8 +84,7 @@
                         </thead>
 
                         <tbody>
-                            @foreach ($employees as $employee)
-                                {{-- @if ($employee->is_active == 1 ) --}}
+                            @foreach ($deactivated_employees as $employee)
                                 <tr>
                                     <td>{{ $employee->user_id }}</td>
                                     <td>{{ $employee->first_name }}</td>
@@ -93,31 +92,13 @@
                                     <td>{{ $employee->email }}</td>
                                     <td>{{ $employee->phone_number }}</td>
                                     <td>
-                                        <span class="badge bg-success">{{ $employee->role }}</span>
-                                    </td>
-
-                                    <td>
-                                        <a href="{{ url('/show_employee', $employee->user_id) }}" class="btn btn-warning btn-sm">Edit</a>
-                                        <a href="{{ url('/deactivate_employee', $employee->user_id) }}" class="btn btn-danger btn-sm">Deactivate</a>
-                                    </td>
-                                </tr>
-
-                                {{-- @else
-                                <tr>
-                                    <td><del>{{ $employee->user_id }}</del></td>
-                                    <td><del>{{ $employee->first_name }}</del></td>
-                                    <td><del>{{ $employee->last_name }}</del></td>
-                                    <td><del>{{ $employee->email }}</del></td>
-                                    <td><del>{{ $employee->phone_number }}</del></td>
-                                    <td>
-                                        <span class="badge bg-danger"><del>{{ $employee->role }}</del></span>
+                                        <span class="badge bg-danger">{{ $employee->role }}</span>
                                     </td>
 
                                     <td>
                                         <a href="{{ url('/activate_employee', $employee->user_id) }}" class="btn btn-success btn-sm">Activate</a>
                                     </td>
                                 </tr>
-                                @endif --}}
                             @endforeach
                         </tbody>
                     </table>

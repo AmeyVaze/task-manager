@@ -19,7 +19,7 @@ class RegisterInternalCompaniesController extends Controller
             'registered_address' => ['required', 'string', 'max:255'],
             'billing_address' => ['required', 'string', 'max:255'],
             'cp_name' => ['required', 'string', 'max:100'],
-            'cp_phone' => ['required', 'digits_between:10,15'],
+            'cp_phone' => ['required', 'digits_between:10,15', 'unique:internal_companies,cp_phone'],
             'cp_email' => ['required', 'email', 'unique:internal_companies,cp_email', 'max:100']
         ]);
 
@@ -102,6 +102,19 @@ class RegisterInternalCompaniesController extends Controller
         $cp_name = $request->cp_name;
         $cp_phone = $request->cp_phone;
         $cp_email = $request->cp_email;
+
+        $is_validated = $request->validate([
+            'company_name' => ['required', 'string', 'max:255'],
+            'type_of_org' => ['required', 'string'],
+            'pan' => ['required', 'alpha_num', 'unique:internal_companies,PAN', 'size:10'],
+            'tan' => ['nullable', 'sometimes', 'alpha_num', 'unique:internal_companies,TAN', 'size:15'],
+            'gstin' => ['nullable', 'sometimes', 'alpha_num', 'unique:internal_companies,GSTIN', 'size:15'],
+            'registered_address' => ['required', 'string', 'max:255'],
+            'billing_address' => ['required', 'string', 'max:255'],
+            'cp_name' => ['required', 'string', 'max:100'],
+            'cp_phone' => ['required', 'digits_between:10,15', 'unique:internal_companies,cp_phone'],
+            'cp_email' => ['required', 'email', 'unique:internal_companies,cp_email', 'max:100']
+        ]);
 
         //if TAN is not provided
         if ($TAN == null) 

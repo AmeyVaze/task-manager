@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('tasks', function (Blueprint $table) {
 
-            $table->id('task_id'); 
+            $table->id('task_id');
             $table->date('assigned_at');
             $table->date('task_deadline');
             $table->boolean('seen')->default('0');
@@ -28,10 +28,10 @@ return new class extends Migration
 
             $table->unsignedBigInteger('client_id');
             $table->foreign('client_id')->references('client_id')->on('clients');
-             
+
             $table->unsignedBigInteger('submodule_id');
             $table->foreign('submodule_id')->references('submodule_id')->on('submodules');
-            
+
             $table->timestamps();
         });
     }

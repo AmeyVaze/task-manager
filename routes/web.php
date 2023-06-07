@@ -26,8 +26,8 @@ Route::get('/', function () {
 });
 
 Route::get(
-    '/assign-tasks', 
-    [TaskAssignmentController::class, 
+    '/assign-tasks',
+    [TaskAssignmentController::class,
     'update_modules']
 );
 
@@ -60,9 +60,11 @@ Route::get('/select-steps', function () {
     return view('manager.selectsteps');
 });
 
-Route::get('/select-employee', function () {
-    return view('manager.selectemployee');
-});
+Route::get(
+    '/select-employee',
+    [TaskAssignmentController::class,
+    'list_registered_employees']
+);
 
 Route::get('/task-assign-successfull', function () {
     return view('manager.taskassignsuccessfull');
@@ -136,15 +138,21 @@ Route::get('/register-employees', function () {
     return view('admin.registeremployees');
 });
 
+Route::get(
+    '/deactivated-employee-list',
+    [RegisterEmployeesController::class,
+    'deactivated_employee_list']
+);
+
 Route::post(
-    '/store_employee_details', 
-    [RegisterEmployeesController::class, 
+    '/store_employee_details',
+    [RegisterEmployeesController::class,
     'store']
 );
 
 Route::get(
-    '/employee-list', 
-    [RegisterEmployeesController::class, 
+    '/employee-list',
+    [RegisterEmployeesController::class,
     'index']
 );
 
@@ -201,14 +209,14 @@ Route::get('/register-clients', function () {
 });
 
 Route::post(
-    '/store_client_details', 
-    [RegisterClientsController::class, 
+    '/store_client_details',
+    [RegisterClientsController::class,
     'store']
 );
 
 Route::get(
-    '/admin-dashboard', 
-    [AdminDashboardCountsController::class, 
+    '/admin-dashboard',
+    [AdminDashboardCountsController::class,
     'count']
 );
 
@@ -253,8 +261,8 @@ Route::get('/register-internal-companies', function () {
 });
 
 Route::get(
-    '/client-list', 
-    [RegisterClientsController::class, 
+    '/client-list',
+    [RegisterClientsController::class,
     'index']
 );
 
@@ -263,7 +271,11 @@ Route::get('/employee-roles-table', function () {
     return view('admin.employeerolestable');
 });
 
-
+Route::get(
+    '/deactivated-client-list',
+    [RegisterClientsController::class,
+    'deactivated_client_list']
+);
 //AUTH ROUTES
 Route::get('/register', function () {
     return view('auth.register');
@@ -281,3 +293,11 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
