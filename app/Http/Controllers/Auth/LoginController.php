@@ -32,19 +32,19 @@ class LoginController extends Controller
     public function authenticated()
     {
         if(auth()->user()->role == 'Administrator') {
-            return redirect(url('/admin-dashboard'));
+            return redirect(url('/admin-dashboard'))->with('status', 'You are now logged in!');
         }
 
         else if(auth()->user()->role == 'Manager') {
-            return redirect(url('/manager-dashboard'));
+            return redirect(url('/manager-dashboard'))->with('status', 'You are now logged in!');
         }
 
         else if(auth()->user()->role == 'Employee') {
-            return redirect(url('/employee-dashboard'));
+            return redirect(url('/employee-dashboard'))->with('status', 'You are now logged in!');
         }
 
         else if(auth()->user()->role == 'Front Desk') {
-            return redirect(url('/front-desk-dashboard'));
+            return redirect(url('/front-desk-dashboard'))->with('status', 'You are now logged in!');
         }
 
         else {
