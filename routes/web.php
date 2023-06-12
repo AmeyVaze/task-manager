@@ -294,4 +294,10 @@ Route::get(
     'authenticated'] 
 );
 
+Route::get(
+    '/logout-employee',
+    [LoginController::class,
+    'logout_employee']
+);
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
