@@ -106,8 +106,7 @@
                         <div class="icon">
                             <i class="ion ion-person-add"></i>
                         </div>
-                        <a href="{{ url('/register-internal-companies') }}" class="small-box-footer">Click Here </a>
-                        {{-- <i class="fas fa-arrow-circle-right"></i> --}}
+                        <a href="{{ url('/register-internal-companies') }}" class="small-box-footer">Click Here <i class="fas fa-arrow-circle-right"></i> </a>
                     </div>
                 </div>
 

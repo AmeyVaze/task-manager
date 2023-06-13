@@ -112,7 +112,7 @@
                                 </div>
                             </div>
                             <!-- Message End --> --}}
-                        {{-- </a>
+                {{-- </a>
                         <div class="dropdown-divider"></div>
                         <a href="#" class="dropdown-item">
                             <!-- Message Start -->
@@ -171,7 +171,7 @@
                     </a>
                 </li>
             </ul> --}}
-        </nav> 
+        </nav>
         <!-- /.navbar -->
 
         <!-- Main Sidebar Container -->
@@ -182,9 +182,9 @@
                 <span class="brand-text font-weight-light">{{ env('APP_NAME') }}</span>
             </a>
 
-                <!-- SidebarSearch Form -->
-                <div class="form-inline">
-                    {{-- <div class="input-group" data-widget="sidebar-search">
+            <!-- SidebarSearch Form -->
+            <div class="form-inline">
+                {{-- <div class="input-group" data-widget="sidebar-search">
                         <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
                         <div class="input-group-append">
                             <button class="btn btn-sidebar">
@@ -192,73 +192,94 @@
                             </button>
                         </div>
                     </div> --}}
-                </div>
-
-                <!-- Sidebar Menu -->
-                <nav class="mt-2">
-                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                        <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
-
-                        <li class="nav-item">
-                            <a href="{{ url('/admin-dashboard') }}" class="nav-link">
-                                <i class="nav-icon fas fa-home"></i>
-                                <p>
-                                    Dashboard
-                                </p>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="{{ url('/employee-list') }}" class="nav-link">
-                                <i class="nav-icon fas fa-list"></i>
-                                <p>
-                                    Employee List
-                                </p>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="{{ url('/client-list') }}" class="nav-link">
-                                <i class="nav-icon fas fa-list"></i>
-                                <p>
-                                    Client List
-                                </p>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="{{ url('/internal-company-list') }}" class="nav-link">
-                                <i class="nav-icon fas fa-list"></i>
-                                <p>
-                                    Internal Company List
-                                </p>
-                            </a>
-                        </li>
-
-                    </ul>
-                </nav>
-                <!-- /.sidebar-menu -->
             </div>
-            <!-- /.sidebar -->
-        </aside>
+
+            <!-- Sidebar Menu -->
+            <nav class="mt-2">
+                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                    <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
+
+                    <li class="nav-item">
+                        <a href="{{ url('/admin-dashboard') }}" class="nav-link">
+                            <i class="nav-icon fas fa-home"></i>
+                            <p>
+                                Dashboard
+                            </p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="{{ url('/employee-list') }}" class="nav-link">
+                            <i class="nav-icon fas fa-list"></i>
+                            <p>
+                                Employee List
+                            </p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="{{ url('/client-list') }}" class="nav-link">
+                            <i class="nav-icon fas fa-list"></i>
+                            <p>
+                                Client List
+                            </p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="{{ url('/internal-company-list') }}" class="nav-link">
+                            <i class="nav-icon fas fa-list"></i>
+                            <p>
+                                Internal Company List
+                            </p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="{{ url('/add-new-module') }}" class="nav-link">
+                            <i class="nav-icon fas fa-plus"></i>
+                            Add new module
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                    <a href="{{ url('/load_and_list_modules') }}" class="nav-link">
+                            <i class="nav-icon fas fa-plus"></i>
+                            Add new submodule
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="{{ url('/') }}" class="nav-link">
+                            <i class="nav-icon fas fa-plus"></i>
+                            Add new task
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+            <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+    </aside>
 
 
-        @yield('content')
-        
+    @yield('content')
 
-        <footer class="main-footer">
-            {{-- <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
+
+    <footer class="main-footer">
+        {{-- <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
             All rights reserved.
             <div class="float-right d-none d-sm-inline-block">
                 <b>Version</b> 3.2.0
             </div> --}}
-        </footer>
+    </footer>
 
-        <!-- Control Sidebar -->
-        <aside class="control-sidebar control-sidebar-dark">
-            <!-- Control sidebar content goes here -->
-        </aside>
-        <!-- /.control-sidebar -->
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
     </div>
     <!-- ./wrapper -->
 
@@ -271,7 +292,7 @@
         $.widget.bridge('uibutton', $.ui.button)
     </script>
 
-    
+
     <!-- Bootstrap 4 -->
     <script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <!-- ChartJS -->
