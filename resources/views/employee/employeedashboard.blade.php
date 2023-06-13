@@ -24,6 +24,13 @@
     <!-- Main content -->
     <section class="content">
         <div class="container-fluid">
+
+        @if (session('status'))
+            <div class="alert alert-success">
+                {{ session('status') }}
+            </div>
+        @endif
+
             <!-- Small boxes (Stat box) -->
             <div class="row">
                 <div class="col-lg-6 col-6">

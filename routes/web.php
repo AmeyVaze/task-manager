@@ -5,6 +5,7 @@ use App\Http\Controllers\RegisterClientsController;
 use App\Http\Controllers\TaskAssignmentController;
 use App\Http\Controllers\RegisterEmployeesController;
 use App\Http\Controllers\AdminDashboardCountsController;
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\RegisterInternalCompaniesController;
 use Illuminate\Support\Facades\Auth;
 
@@ -287,17 +288,16 @@ Route::get('/login', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get(
+    '/authenticated_user',
+    [LoginController::class,
+    'authenticated'] 
+);
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
+Route::get(
+    '/logout-employee',
+    [LoginController::class,
+    'logout_employee']
+);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

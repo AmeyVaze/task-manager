@@ -6,6 +6,22 @@
     <!-- Content Header (Page header) -->
     <div class="content-header">
         <div class="container-fluid">
+
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar user panel (optional) -->
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="image">
+                        <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                    </div>
+                    <div class="info">
+                        <a href="#" class="d-block">Hello,</a>
+                    </div>
+                </div>
+            </div>
+
+
             <div class="row mb-2">
                 <div class="col-sm-6">
                     <h1 class="m-0"><strong>ADMINISTRATOR DASHBOARD</strong></h1>
@@ -24,6 +40,14 @@
     <!-- Main content -->
     <section class="content">
         <div class="container-fluid">
+
+        @if (session('status'))
+            <div class="alert alert-success">
+                {{ session('status') }}
+            </div>
+        @endif
+        
+
             <!-- Small boxes (Stat box) -->
             <div class="row">
                 <!-- ./col -->

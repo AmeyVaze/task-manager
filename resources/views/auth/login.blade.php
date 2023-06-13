@@ -39,9 +39,11 @@
                 </a>
             @endif
 
-            <x-primary-button class="ml-3">
-                {{ __('Log in') }}
-            </x-primary-button>
+            <a href="{{ url('/authenticated_user') }}">
+                <x-primary-button class="ml-3">
+                    {{ __('Log in') }}
+                </x-primary-button>
+            </a>
         </div>
     </form>
 </x-guest-layout>
