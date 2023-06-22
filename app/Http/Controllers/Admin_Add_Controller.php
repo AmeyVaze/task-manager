@@ -8,7 +8,7 @@ class Admin_Add_Controller extends Controller
 {
     public function store_module_name(Request $request)
     {
-        $is_validated = $request->validate(['module_name' => 'unique:modules, module_name']);
+        $is_validated = $request->validate(['module_name' => 'unique:modules']);
         if($is_validated) {
             $query = DB::insert('insert into modules(module_name) values (?)', [$request->module_name]);
             if($query) return redirect('/add-new-module')->with('status-success-query', 'New MODULE added successfully!');
@@ -20,5 +20,6 @@ class Admin_Add_Controller extends Controller
     {
         $modules = DB::select('select module_name from modules');
         return view('admin.addnewsubmodule')->with('modules', $modules);
+        
     }
 }

@@ -243,7 +243,7 @@
                     </li>
 
                     <li class="nav-item">
-                    <a href="{{ url('/load_and_list_modules') }}" class="nav-link">
+                    <a href="{{ url('/add-new-submodule') }}" class="nav-link">
                             <i class="nav-icon fas fa-plus"></i>
                             Add new submodule
                         </a>

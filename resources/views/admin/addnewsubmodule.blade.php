@@ -61,7 +61,7 @@
                     <select name="module_name" id="module">
                         @foreach ($modules as $module)
                         {
-                            <option value="{{ $module->module_name }}">{{ $module->module_name }}</option>
+                        <option value="{{ $module->module_name }}">{{ $module->module_name }}</option>
                         }
                     </select>
                     <input type="text" class="form-control" required name="module_name" aria-describedby="module_name_help" placeholder="Enter module name">

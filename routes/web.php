@@ -150,16 +150,12 @@ Route::get('/add-new-submodule', function () {
 
 
 
+
+
 Route::get(
     '/store_new_module',
     [Admin_Add_Controller::class,
     'store_module_name']
-);
-
-Route::get(
-    '/load_and_list_modules',
-    [Admin_Add_Controller::class,
-    'load_and_list']
 );
 
 
