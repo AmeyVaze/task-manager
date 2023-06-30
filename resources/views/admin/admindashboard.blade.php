@@ -51,7 +51,7 @@
             <!-- Small boxes (Stat box) -->
             <div class="row">
                 <!-- ./col -->
-                <div class="col-lg-3 col-6">
+                <div class="col-lg-6 col-6">
                     <!-- small box -->
                     <div class="small-box bg-warning">
                         <div class="inner">
@@ -66,7 +66,7 @@
                 </div>
 
                 <!-- ./col -->
-                <div class="col-lg-3 col-6">
+                <div class="col-lg-6 col-6">
                     <!-- small box -->
                     <div class="small-box bg-success">
                         <div class="inner">
@@ -81,7 +81,7 @@
                 </div>
 
                 <!-- ./col -->
-                <div class="col-lg-3 col-6">
+                <div class="col-lg-6 col-6">
                     <!-- small box -->
                     <div class="small-box bg-orange">
                         <div class="inner">
@@ -96,7 +96,7 @@
                 </div>
 
                 <!-- ./col -->
-                <div class="col-lg-3 col-6">
+                <div class="col-lg-6 col-6">
                     <!-- small box -->
                     <div class="small-box bg-primary">
                         <div class="inner">
@@ -106,8 +106,7 @@
                         <div class="icon">
                             <i class="ion ion-person-add"></i>
                         </div>
-                        <a href="{{ url('/register-internal-companies') }}" class="small-box-footer">Click Here </a>
-                        {{-- <i class="fas fa-arrow-circle-right"></i> --}}
+                        <a href="{{ url('/register-internal-companies') }}" class="small-box-footer">Click Here <i class="fas fa-arrow-circle-right"></i> </a>
                     </div>
                 </div>
 

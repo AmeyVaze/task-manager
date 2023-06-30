@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterClientsController;
+use App\Http\Controllers\Admin_Add_Controller;
 use App\Http\Controllers\TaskAssignmentController;
 use App\Http\Controllers\RegisterEmployeesController;
 use App\Http\Controllers\AdminDashboardCountsController;
@@ -138,6 +139,26 @@ Route::get('/invoiced-clients', function () {
 Route::get('/register-employees', function () {
     return view('admin.registeremployees');
 });
+
+Route::get('/add-new-module', function () {
+    return view('admin.addnewmodule');
+});
+
+Route::get('/add-new-submodule', function () {
+    return view('admin.addnewsubmodule');
+});
+
+
+
+
+
+Route::get(
+    '/store_new_module',
+    [Admin_Add_Controller::class,
+    'store_module_name']
+);
+
+
 
 Route::get(
     '/deactivated-employee-list',

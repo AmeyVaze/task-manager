@@ -39,7 +39,7 @@ class LoginController extends Controller
         if(auth()->user()->role == 'Administrator') {
             $email = $request->email;
             $name = DB::select('select first_name from users where email = ?', [$email]);
-            return redirect(url('/admin-dashboard'))->with('status', 'You are now logged in!');
+            return redirect(url('/admin-dashboard'))->with(['status' => 'You are now logged in!']);
         }
 
         else if(auth()->user()->role == 'Manager') {
