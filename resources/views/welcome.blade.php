@@ -43,11 +43,7 @@
                         <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
 
                         @if (Route::has('register'))
-<<<<<<< HEAD
-                            <a href="{{ url('/register-employees') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-=======
                             <a href="{{ url('register-employees') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
->>>>>>> 30b8e742e550122d25d852d4a6ad761e652b7162
                         @endif
                     @endauth
                 </div>
