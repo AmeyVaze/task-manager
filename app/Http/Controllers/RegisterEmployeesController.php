@@ -10,14 +10,14 @@ class RegisterEmployeesController extends Controller
 {
     public function store(Request $request) {
         $first_name = $request->first_name;
-        $last_name = $request->last_name;
+        // $last_name = $request->last_name;
         $email = $request->email;
         $phone_no = $request->phone_no;
         $role = $request->role;
         $password = Hash::make($request->password);
 
-        $query = DB::insert('insert into users (first_name, last_name, email, phone_number, role, password) 
-        values (?, ?, ?, ?, ? ,?)', [$first_name, $last_name, $email, $phone_no, $role, $password]);
+        $query = DB::insert('insert into users (first_name, email, phone_number, role, password) 
+        values (?, ?, ?, ? ,?)', [$first_name, $email, $phone_no, $role, $password]);
 
         if($query) {
             return redirect('/register-employees')
@@ -33,13 +33,13 @@ class RegisterEmployeesController extends Controller
     public function index()
     {
         // $employees = DB::table('users')->select('user_id','first_name', 'last_name', 'email', 'phone_number', 'role', 'is_active')->get();
-        $employees = DB::select('select user_id, first_name, last_name, email, phone_number, role from users where is_active = 1');
+        $employees = DB::select('select user_id, first_name, email, phone_number, role from users where is_active = 1');
         return view('admin.employeelist')->with('employees', $employees);
     }
 
     public function show_employee_details($id)
     {
-        $employee_details = DB::select('select user_id, first_name, last_name, email, phone_number, role from users where user_id = ?', [$id]);
+        $employee_details = DB::select('select user_id, first_name, email, phone_number, role from users where user_id = ?', [$id]);
         return view('admin.editemployeeform', ['employee_details' => $employee_details]);
     }
 
@@ -47,13 +47,13 @@ class RegisterEmployeesController extends Controller
     {
         
         $first_name = $request->first_name;
-        $last_name = $request->last_name;
+        // $last_name = $request->last_name;
         $email = $request->email;
         $phone_no = $request->phone_no;
         $role = $request->role;
 
-        $query = DB::update('update users set first_name = ?, last_name = ?, email = ?, phone_number = ?, role = ? where user_id = ?', 
-                            [$first_name, $last_name, $email, $phone_no, $role, $id]);
+        $query = DB::update('update users set first_name = ?, email = ?, phone_number = ?, role = ? where user_id = ?', 
+                            [$first_name, $email, $phone_no, $role, $id]);
 
         if($query){
             return redirect('/employee-list')
@@ -82,7 +82,7 @@ class RegisterEmployeesController extends Controller
 
     public function deactivated_employee_list()
     {
-        $deactivated_employees = DB::select('select user_id, first_name, last_name, email, phone_number, role from users where is_active = 0');
+        $deactivated_employees = DB::select('select user_id, first_name, email, phone_number, role from users where is_active = 0');
         return view('admin.deactivatedemployeelist', ['deactivated_employees' => $deactivated_employees]);
     }
 }

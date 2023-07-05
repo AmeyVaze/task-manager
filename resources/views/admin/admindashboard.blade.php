@@ -61,7 +61,7 @@
                         <div class="icon">
                             <i class="ion ion-stats-bars"></i>
                         </div>
-                        <a href="{{ url('/employee-roles-table') }}" class="small-box-footer">Click Here  <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="{{ url('/employee-list') }}" class="small-box-footer">Click Here  <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
 

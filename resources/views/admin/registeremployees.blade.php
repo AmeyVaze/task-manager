@@ -38,7 +38,7 @@
                     <form action="{{ url('store_employee_details') }}" method="POST">
                         @csrf
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="First name" name="first_name" required id="first_name">
+                            <input type="text" class="form-control" placeholder="Name" name="first_name" required id="first_name">
                             <div class="input-group-append">
                                 <div class="input-group-text">
                                     <span class="fas fa-user"></span>
@@ -46,14 +46,14 @@
                             </div>
                         </div>
 
-                        <div class="input-group mb-3">
+                        {{-- <div class="input-group mb-3">
                             <input type="text" class="form-control" placeholder="Last name" name="last_name" required id="last_name">
                             <div class="input-group-append">
                                 <div class="input-group-text">
                                     <span class="fas fa-user"></span>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
 
 
                         <div class="input-group mb-3">

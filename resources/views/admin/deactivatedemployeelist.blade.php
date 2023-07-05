@@ -74,8 +74,8 @@
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>First Name</th>
-                                <th>Last Name</th>
+                                <th>Name</th>
+                                {{-- <th>Last Name</th> --}}
                                 <th>E-mail</th>
                                 <th>Phone Number</th>
                                 <th>Role</th>
@@ -88,7 +88,7 @@
                                 <tr>
                                     <td>{{ $employee->user_id }}</td>
                                     <td>{{ $employee->first_name }}</td>
-                                    <td>{{ $employee->last_name }}</td>
+                                    {{-- <td>{{ $employee->last_name }}</td> --}}
                                     <td>{{ $employee->email }}</td>
                                     <td>{{ $employee->phone_number }}</td>
                                     <td>

@@ -46,7 +46,7 @@
                                 @foreach ($registered_employees as $employee)
                                 <tr>
                                     <th scope="row">{{ $employee->user_id }}</th>
-                                    <td>{{ $employee->full_name }}</td>
+                                    <td>{{ $employee->first_name }}</td>
                                     <td><span class="badge bg-success">{{ $employee->role }}</span></td>
                                     <td>{{ $employee->email }}</td>
                                     <td>{{ $employee->phone_number }}</td>
